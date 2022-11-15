@@ -10,7 +10,7 @@ type SanitizedMessage = Omit<Message, "element"> & { element?: Element };
 
 export const htmlcsConfig: ToolConfig<Array<SanitizedMessage>> = {
     name: "HTML_CodeSniffer",
-    setupPage: async (page: Page) => await page.addScriptTag({path: path.resolve(__dirname, 'HTMLCS.js')}),
+    setupPage: async (page: Page) => await page.addScriptTag({path: path.resolve(__dirname, '/htmlcs_lib/HTMLCS.js')}),
     evaluate: async (page: Page) => page.evaluate(() => {
         HTMLCS_RUNNER.run('WCAG2AAA');
         const messages: Message[] = HTMLCS.getMessages();
