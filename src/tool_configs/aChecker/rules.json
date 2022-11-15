@@ -1,0 +1,5879 @@
+[
+  {
+    "id": "aria_attribute_conflict",
+    "context": "dom:*[aria-required], dom:*[aria-autocomplete], dom:*[aria-readonly], dom:*[aria-disabled], dom:*[aria-placeholder], dom:*[aria-checked], dom:*[aria-hidden], dom:*[aria-valuemax], dom:*[aria-valuemin], dom:*[aria-colspan], dom:*[aria-rowspan]",
+    "help": {
+      "en-US": {
+        "pass": "aria_attribute_conflict.html",
+        "fail_conflict": "aria_attribute_conflict.html",
+        "group": "aria_attribute_conflict.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "pass": "Rule Passed",
+        "fail_conflict": "The ARIA attribute \"{0}\" is in conflict with the corresponding HTML attribute \"{1}\"",
+        "group": "An ARIA attribute must not conflict with the corresponding HTML attribute"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "aria_attribute_deprecated",
+    "context": "dom:*",
+    "help": {
+      "en-US": {
+        "pass": "aria_attribute_deprecated.html",
+        "fail_aria_role": "aria_attribute_deprecated.html",
+        "fail_aria_attr": "aria_attribute_deprecated.html",
+        "fail_role_attr": "aria_attribute_deprecated.html",
+        "group": "aria_attribute_deprecated.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "pass": "The ARIA roles and attribute are used per specification",
+        "fail_aria_role": "The ARIA role \"{0}\" is deprecated in the ARIA specification",
+        "fail_aria_attr": "The ARIA attributes \"{0}\" are deprecated in the ARIA specification",
+        "fail_role_attr": "The ARIA attributes \"{0}\" are deprecated for the role \"{1}\" in the ARIA specification",
+        "group": "No deprecated ARIA role or attribute should be used"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "aria_attribute_redundant",
+    "context": "dom:*[aria-required], dom:*[aria-autocomplete], dom:*[aria-readonly], dom:*[aria-disabled], dom:*[aria-placeholder], dom:*[aria-checked], dom:*[aria-hidden], dom:*[aria-valuemax], dom:*[aria-valuemin], dom:*[aria-colspan], dom:*[aria-rowspan]",
+    "help": {
+      "en-US": {
+        "pass": "aria_attribute_redundant.html",
+        "fail_redundant": "aria_attribute_redundant.html",
+        "group": "aria_attribute_redundant.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "pass": "Rule Passed",
+        "fail_redundant": "The ARIA attribute \"{0}\" is redundant with the HTML attribute \"{1}\"",
+        "group": "An ARIA attribute should not be used when there is a corresponding HTML attribute"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "aria_child_valid",
+    "context": "dom:*",
+    "dependencies": [
+      "aria_semantics_role",
+      "aria_descendant_valid"
+    ],
+    "help": {
+      "en-US": {
+        "group": "aria_child_valid.html",
+        "Pass": "aria_child_valid.html",
+        "Fail_no_child": "aria_child_valid.html",
+        "Fail_invalid_child": "aria_child_valid.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "An element with a ARIA role must own a required child",
+        "Pass": "An element with a ARIA role owns a required child",
+        "Fail_no_child": "The element with role \"{0}\" does not own any child element with any of the following role(s): \"{1}\"",
+        "Fail_invalid_child": "The element with role \"{0}\" owns the child element with the role \"{1}\" that is not one of the allowed role(s): \"{2}\""
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": [
+      "bc4a75"
+    ]
+  },
+  {
+    "id": "aria_descendant_valid",
+    "context": "dom:*",
+    "dependencies": [
+      "aria_semantics_role"
+    ],
+    "help": {
+      "en-US": {
+        "group": "aria_descendant_valid.html",
+        "pass": "aria_descendant_valid.html",
+        "potential_child_implicit_role": "aria_descendant_valid.html",
+        "fail_child_explicit_role": "aria_descendant_valid.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "Browsers ignore the explicit and implicit ARIA roles of the descendants of certain elements",
+        "pass": "The element contains valid descendants",
+        "potential_child_implicit_role": "The element with role \"{0}\" contains descendants with implicit roles \"{1}\" which are ignored by browsers",
+        "fail_child_explicit_role": "The element with role \"{0}\" contains descendants with roles \"{1}\" which are ignored by browsers"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": [
+      "307n5z"
+    ]
+  },
+  {
+    "id": "aria_hidden_focus_misuse",
+    "context": "dom:*[aria-hidden=true], dom:*[aria-hidden=true] dom:*",
+    "help": {
+      "en-US": {
+        "group": "aria_hidden_focus_misuse.html",
+        "Pass_0": "aria_hidden_focus_misuse.html",
+        "Fail_1": "aria_hidden_focus_misuse.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "A focusable element should not be within the subtree of an element with 'aria-hidden' set to \"true\"",
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Element \"{0}\" should not be focusable within the subtree of an element with an 'aria-hidden' attribute with value 'true'"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_0",
+          "WCAG_2_1"
+        ],
+        "num": [
+          "1.3.1",
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": "6cfa84"
+  },
+  {
+    "id": "aria_role_redundant",
+    "context": "dom:*[role]",
+    "help": {
+      "en-US": {
+        "pass": "aria_role_redundant.html",
+        "fail_redundant": "aria_role_redundant.html",
+        "group": "aria_role_redundant.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "pass": "An explicitly-assigned ARIA role is not redundant with the implicit role of the element",
+        "fail_redundant": "The explicitly-assigned ARIA role \"{0}\" is redundant with the implicit role of the element <{1}>",
+        "group": "An explicitly-assigned ARIA role should not be redundant with the implicit role of the element"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "4"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "aria_semantics_role",
+    "context": "dom:*",
+    "dependencies": [
+      "Rpt_Aria_ValidProperty"
+    ],
+    "help": {
+      "en-US": {
+        "Pass_0": "aria_semantics_role.html",
+        "Fail_1": "aria_semantics_role.html",
+        "Fail_2": "aria_semantics_role.html",
+        "group": "aria_semantics_role.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The ARIA role '{0}' is not valid for the element <{1}>",
+        "Fail_2": "The ARIA role '{0}' is not valid for the element <{1}> and may be ignored by the browser since the element is focusable",
+        "group": "ARIA roles must be valid for the element to which they are assigned"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "aria_attribute_allowed",
+    "context": "dom:*",
+    "dependencies": [
+      "aria_semantics_role"
+    ],
+    "help": {
+      "en-US": {
+        "group": "aria_attribute_allowed.html",
+        "Pass": "aria_attribute_allowed.html",
+        "Fail_invalid_role_attr": "aria_attribute_allowed.html",
+        "Fail_invalid_implicit_role_attr": "aria_attribute_allowed.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "ARIA attributes must be valid for the element and ARIA role to which they are assigned",
+        "Pass": "ARIA attributes are valid for the element and ARIA role",
+        "Fail_invalid_role_attr": "The ARIA attributes \"{0}\" are not valid for the element <{1}> with ARIA role \"{2}\"",
+        "Fail_invalid_implicit_role_attr": "The ARIA attributes \"{0}\" are not valid for the element <{1}> with implicit ARIA role \"{2}\""
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": [
+      "5c01ea",
+      {
+        "46ca7f": {
+          "Pass": "pass",
+          "Fail_invalid_role_attr": "fail"
+        }
+      }
+    ]
+  },
+  {
+    "id": "combobox_active_descendant",
+    "context": "aria:combobox",
+    "dependencies": [
+      "combobox_popup_reference"
+    ],
+    "help": {
+      "en-US": {
+        "Pass": "combobox_active_descendant.html",
+        "Fail_missing": "combobox_active_descendant.html",
+        "Fail_not_in_popup": "combobox_active_descendant.html",
+        "Fail_active_role_invalid": "combobox_active_descendant.html",
+        "Fail_active_not_selected": "combobox_active_descendant.html",
+        "group": "combobox_active_descendant.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass": "'aria-activedescendant' is used appropriately for this combobox",
+        "Fail_missing": "The element referenced by 'aria-activedescendant' \"{0}\" does not exist",
+        "Fail_not_in_popup": "The element referenced by 'aria-activedescendant' \"{0}\" does not exist within the popup referenced by 'id' \"{1}\"",
+        "Fail_active_role_invalid": "The 'aria-activedescendant' \"{0}\" references an element with the roles \"{1}\", which does not have a valid ARIA role of 'option', 'gridcell', 'row', or 'treeitem'",
+        "Fail_active_not_selected": "The 'aria-activedescendant' \"{0}\" references an element that does not have 'aria-selected' set to true",
+        "group": "'aria-activedescendant' must be used to define focus within the combobox popup, except when using a dialog popup"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "combobox_autocomplete",
+    "context": "aria:combobox",
+    "dependencies": [
+      "combobox_popup_reference"
+    ],
+    "help": {
+      "en-US": {
+        "Pass": "combobox_autocomplete.html",
+        "Fail_1": "combobox_autocomplete.html",
+        "Fail_inline": "combobox_autocomplete.html",
+        "group": "combobox_autocomplete.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass": "The combobox does not use 'aria-autocomplete' value '\"inline\"' nor does it have 'aria-autocomplete' defined within the popup",
+        "Fail_1": "The combobox has the 'aria-autocomplete' attribute incorrectly set on an element within the popup referenced by \"{0}\"",
+        "Fail_inline": "The combobox does not support an 'aria-autocomplete' attribute value set to '\"inline\"' ",
+        "group": "A combobox that supports autocompletion behavior must have the 'aria-autocomplete' attribute only on its text input element with a valid value; a value of '\"inline\"' is not supported"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "combobox_focusable_elements",
+    "context": "aria:combobox",
+    "dependencies": [
+      "combobox_popup_reference"
+    ],
+    "help": {
+      "en-US": {
+        "Pass": "combobox_focusable_elements.html",
+        "Fail_not_tabbable": "combobox_focusable_elements.html",
+        "Fail_tabbable_child": "combobox_focusable_elements.html",
+        "group": "combobox_focusable_elements.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass": "DOM focus is allowed only on the combobox element as required",
+        "Fail_not_tabbable": "The combobox element does not allow DOM focus as required",
+        "Fail_tabbable_child": "The popup of the combobox has DOM focus or has 'aria-activedescendant' defined, which is not allowed",
+        "group": "Tabbable focus for the combobox must be allowed only on the text input, except when using a dialog popup"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "combobox_haspopup",
+    "context": "aria:combobox",
+    "dependencies": [
+      "combobox_popup_reference"
+    ],
+    "help": {
+      "en-US": {
+        "Pass": "combobox_haspopup.html",
+        "Fail_popup_role_invalid": "combobox_haspopup.html",
+        "Fail_combobox_popup_role_mismatch": "combobox_haspopup.html",
+        "group": "combobox_haspopup.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass": "The 'aria-controls' (ARIA 1.2) or 'aria-owns' (ARIA 1.0) appropriately references a valid popup 'id' value",
+        "Fail_popup_role_invalid": "The 'role' value \"{0}\" of the popup element \"{1}\" should be one of \"listbox\", \"grid\", \"tree\" or \"dialog\"",
+        "Fail_combobox_popup_role_mismatch": "The value of the combobox 'aria-haspopup' attribute \"{0}\" does not match the 'role' value of the popup element \"{1}\"",
+        "group": "The combobox attribute 'aria-haspopup' value must be appropriate for the role of the element referenced by 'aria-controls' (ARIA 1.2) or 'aria-owns' (ARIA 1.0)"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "combobox_popup_reference",
+    "context": "aria:combobox",
+    "dependencies": [
+      "combobox_version"
+    ],
+    "help": {
+      "en-US": {
+        "group": "combobox_popup_reference.html",
+        "Pass_expanded": "combobox_popup_reference.html",
+        "Pass_collapsed": "combobox_popup_reference.html",
+        "Fail_1.0_missing_owns": "combobox_popup_reference.html",
+        "Fail_1.2_missing_controls": "combobox_popup_reference.html",
+        "Fail_1.0_popup_reference_missing": "combobox_popup_reference.html",
+        "Fail_1.2_popup_reference_missing": "combobox_popup_reference.html",
+        "Fail_combobox_expanded_hidden": "combobox_popup_reference.html",
+        "Fail_combobox_collapsed_visible": "combobox_popup_reference.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "The 'aria-controls' (for ARIA 1.2) or the 'aria-owns' (for ARIA 1.0) attribute of the expanded combobox must reference a valid popup 'id' value",
+        "Pass_expanded": "The combobox popup referenced by 'aria-controls' (ARIA 1.2) or 'aria-owns' (ARIA 1.0) exists and is visible",
+        "Pass_collapsed": "The combobox popup in its collapsed state does not reference any visible popup as required",
+        "Fail_1.0_missing_owns": "The 'aria-owns' attribute of the expanded combobox is missing",
+        "Fail_1.2_missing_controls": "The 'aria-controls' attribute of the expanded combobox is missing",
+        "Fail_1.0_popup_reference_missing": "The 'aria-owns' attribute \"{0}\" of the expanded combobox does not reference a valid popup 'id' value",
+        "Fail_1.2_popup_reference_missing": "The 'aria-controls' attribute \"{0}\" of the expanded combobox does not reference a valid popup 'id' value",
+        "Fail_combobox_expanded_hidden": "The combobox 'aria-expanded' attribute is true, but the combobox popup is not visible",
+        "Fail_combobox_collapsed_visible": "The combobox 'aria-expanded' attribute is false, but the combobox popup is visible"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": [
+      {
+        "4e8ab6": {
+          "Pass_expanded": "pass",
+          "Pass_collapsed": "pass",
+          "Fail_1.0_missing_owns": "inapplicable",
+          "Fail_1.2_missing_controls": "fail",
+          "Fail_1.0_popup_reference_missing": "inapplicable",
+          "Fail_1.2_popup_reference_missing": "fail",
+          "Fail_combobox_expanded_hidden": "inapplicable",
+          "Fail_combobox_collapsed_visible": "inapplicable"
+        }
+      }
+    ]
+  },
+  {
+    "id": "combobox_version",
+    "context": "aria:combobox",
+    "help": {
+      "en-US": {
+        "Pass_1.0": "combobox_version.html",
+        "Fail_1.1": "combobox_version.html",
+        "Pass_1.2": "combobox_version.html",
+        "group": "combobox_version.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_1.0": "The combobox design pattern is detected as ARIA 1.0, which is allowed by ARIA 1.2",
+        "Fail_1.1": "The combobox design pattern is detected as ARIA 1.1, which is not allowed by ARIA 1.2",
+        "Pass_1.2": "The combobox design pattern is detected as ARIA 1.2",
+        "group": "The combobox design pattern must be valid for ARIA 1.2"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "debug_paths",
+    "context": "dom:*",
+    "help": {
+      "en-US": {
+        "group": "",
+        "Pass_0": ""
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "",
+        "Pass_0": ""
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "DEBUG"
+        ],
+        "num": "1",
+        "level": "INFORMATION",
+        "toolkitLevel": "4"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "detector_tabbable",
+    "context": "dom:*",
+    "help": {
+      "en-US": {
+        "group": "",
+        "Pass_0": ""
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "",
+        "Pass_0": ""
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "EXTENSIONS"
+        ],
+        "num": "1",
+        "level": "INFORMATION",
+        "toolkitLevel": "4"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "element_attribute_deprecated",
+    "context": "dom:applet, dom:basefont, dom:center, dom:dir, dom:font, dom:isindex, dom:listing, dom:menu, dom:plaintext, dom:spacer, dom:s, dom:strike, dom:u, dom:xmp, dom:acronym, dom:frame, dom:frameset, dom:noframes, dom:noembed, dom:big, dom:blink, dom:marquee, dom:ttNaNdom:*[align], dom:*[link], dom:*[archive], dom:*[background], dom:*[bgcolor], dom:*[clear], dom:*[code], dom:*[color], dom:*[compact], dom:*[face], dom:*[hspace], dom:*[language], dom:*[link], dom:*[noshade], dom:*[nowrap], dom:*[object], dom:*[prompt], dom:*[start], dom:*[text], dom:*[version], dom:*[vlink], dom:*[vspace]NaNdom:td[height], dom:td[width], dom:td[abbr], dom:td[axis], dom:td[char], dom:td[charoff], dom:td[height], dom:td[nowrap], dom:td[valign], dom:td[width], dom:td[align], dom:td[bgcolor], dom:th[height], dom:th[width], dom:th[abbr], dom:th[axis], dom:th[charoff], dom:th[height], dom:th[bgcolor], dom:th[align], dom:th[nowrap], dom:th[char], dom:th[valign], dom:th[width], dom:li[type], dom:li[value], dom:li[type], dom:ul[type], dom:ul[compact], dom:pre[width], dom:meta[http-equiv], dom:a[charset], dom:a[coords], dom:a[shape], dom:a[rev], dom:a[scheme], dom:link[rev], dom:link[charset], dom:link[target], dom:img[name], dom:img[longdesc], dom:img[align], dom:img[hspace], dom:img[vspace], dom:img[border], dom:area[nohref], dom:head[profile], dom:html[version], dom:iframe[longdesc], dom:iframe[align], dom:iframe[frameborder], dom:iframe[marginheight], dom:iframe[marginwidth], dom:iframe[scrolling], dom:object[archive], dom:object[code], dom:object[codebase], dom:object[codetype], dom:object[declare], dom:object[standby], dom:object[align], dom:object[hspace], dom:object[vspace], dom:object[border], dom:param[type], dom:param[valuetype], dom:script[language], dom:body[alink], dom:body[background], dom:body[bgcolor], dom:body[link], dom:body[text], dom:body[vlink], dom:br[clear], dom:caption[align], dom:col[align], dom:col[char], dom:col[charoff], dom:col[valign], dom:col[width], dom:div[align], dom:dl[compact], dom:hr[align], dom:hr[noshade], dom:hr[size], dom:hr[width], dom:hr[align], dom:h2[align], dom:h3[align], dom:h4[align], dom:h5[align], dom:h6[align], dom:input[align], dom:input[usemap], dom:legend[align], dom:menu[compact], dom:ol[compact], dom:ol[type], dom:ol[type], dom:p[align], dom:table[bgcolor], dom:table[cellpadding], dom:table[cellspacing], dom:table[frame], dom:table[rules], dom:table[width], dom:table[align], dom:tbody[align], dom:tbody[char], dom:tbody[valign], dom:tbody[charoff], dom:tfoot[align], dom:tfoot[charoff], dom:tfoot[char], dom:tfoot[valign], dom:thead[char], dom:thead[charoff], dom:thead[valign], dom:thead[align], dom:tr[align], dom:tr[bgcolor], dom:tr[char], dom:tr[charoff], dom:tr[valign]",
+    "help": {
+      "en-US": {
+        "pass": "element_attribute_deprecated.html",
+        "fail_elem": "element_attribute_deprecated.html",
+        "fail_attr": "element_attribute_deprecated.html",
+        "fail_elem_attr": "element_attribute_deprecated.html",
+        "group": "element_attribute_deprecated.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "pass": "Rule Passed",
+        "fail_elem": "The <{0}> element is deprecated in HTML 5",
+        "fail_attr": "The HTML attribute(s) \"{0}\" is deprecated in HTML 5",
+        "fail_elem_attr": "The HTML attribute(s) \"{0}\" is deprecated for the <{1}> element in HTML 5",
+        "group": "Avoid use of obsolete features if possible"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "html_lang_valid",
+    "context": "dom:html[lang], dom:html[xml:lang]",
+    "help": {
+      "en-US": {
+        "Pass_0": "html_lang_valid.html",
+        "Fail_1": "html_lang_valid.html",
+        "Fail_2": "html_lang_valid.html",
+        "Fail_3": "html_lang_valid.html",
+        "Fail_4": "html_lang_valid.html",
+        "group": "html_lang_valid.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Lang has a valid primary lang and conforms to BCP 47",
+        "Fail_1": "Specified 'lang' attribute does not include a valid primary language",
+        "Fail_2": "Specified 'lang' attribute does not conform to BCP 47",
+        "Fail_3": "Specified 'xml:lang' attribute does not include a valid primary language",
+        "Fail_4": "Specified 'xml:lang' attribute does not conform to BCP 47",
+        "group": "The default human language of the page must be valid and specified in accordance with BCP 47"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "3.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": [
+      {
+        "b5c3f8": {
+          "Pass_0": "pass",
+          "Fail_1": "fail",
+          "Fail_2": "inapplicable",
+          "Fail_3": "inapplicable",
+          "Fail_4": "inapplicable"
+        },
+        "bf051a": {
+          "Pass_0": "pass",
+          "Fail_1": "fail",
+          "Fail_2": "pass",
+          "Fail_3": "fail",
+          "Fail_4": "inapplicable"
+        }
+      }
+    ]
+  },
+  {
+    "id": "element_lang_valid",
+    "context": "dom:*[lang], dom:*[xml:lang]",
+    "help": {
+      "en-US": {
+        "Pass_0": "element_lang_valid.html",
+        "Fail_1": "element_lang_valid.html",
+        "Fail_2": "element_lang_valid.html",
+        "Fail_3": "element_lang_valid.html",
+        "Fail_4": "element_lang_valid.html",
+        "group": "element_lang_valid.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Lang has a valid primary lang and conforms to BCP 47",
+        "Fail_1": "Specified 'lang' attribute does not include a valid primary language",
+        "Fail_2": "Specified 'lang' attribute does not conform to BCP 47",
+        "Fail_3": "Specified 'xml:lang' attribute does not include a valid primary language",
+        "Fail_4": "Specified 'xml:lang' attribute does not conform to BCP 47",
+        "group": "The change in language of specific content must be valid and specified in accordance with BCP 47"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "3.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": [
+      {
+        "de46e4": {
+          "Pass_0": "pass",
+          "Fail_1": "fail",
+          "Fail_2": "pass",
+          "Fail_3": "inapplicable",
+          "Fail_4": "inapplicable"
+        }
+      }
+    ]
+  },
+  {
+    "id": "element_tabbable_role_valid",
+    "context": "dom:*",
+    "help": {
+      "en-US": {
+        "pass": "element_tabbable_role_valid.html",
+        "fail_invalid_role": "element_tabbable_role_valid.html",
+        "group": "element_tabbable_role_valid.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "pass": "The tabbable element has a widget role",
+        "fail_invalid_role": "The tabbable element's role '{0}' is not a widget role",
+        "group": "A tabbable element must have a valid widget role"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      },
+      {
+        "id": [
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "element_tabbable_visible",
+    "context": "dom:*",
+    "dependencies": [],
+    "help": {
+      "en-US": {
+        "group": "element_tabbable_visible.html",
+        "pass": "element_tabbable_visible.html",
+        "potential_visible": "element_tabbable_visible.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "A tabbable element should be visible on the screen when it has keyboard focus",
+        "pass": "The tabbable element is visible on the screen",
+        "potential_visible": "Confirm the element should be tabbable, and is visible on the screen when it has keyboard focus"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.7"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "group_withInputs_hasName",
+    "context": "aria:group",
+    "help": {
+      "en-US": {
+        "Pass_1": "group_withInputs_hasName.html",
+        "Fail_1": "group_withInputs_hasName.html",
+        "Fail_2": "group_withInputs_hasName.html",
+        "group": "group_withInputs_hasName.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_1": "Group/Fieldset \"{0}\" with an input has a unique name",
+        "Fail_1": "Group/Fieldset does not have an accessible name",
+        "Fail_2": "Group/Fieldset \"{0}\" has a duplicate name to another group",
+        "group": "Groups with nested inputs must have unique accessible name"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1",
+          "3.3.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "HAAC_Accesskey_NeedLabel",
+    "context": "dom:*[accesskey]",
+    "help": {
+      "en-US": {
+        "Pass_0": "HAAC_Accesskey_NeedLabel.html",
+        "Potential_1": "HAAC_Accesskey_NeedLabel.html",
+        "group": "HAAC_Accesskey_NeedLabel.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "The HTML element with an assigned 'accesskey' attribute does not have an associated label",
+        "group": "An HTML element with an assigned 'accesskey' attribute must have an associated label"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "3.3.2"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "HAAC_ActiveDescendantCheck",
+    "context": "dom:*[aria-activedescendant]",
+    "help": {
+      "en-US": {
+        "Pass_0": "HAAC_ActiveDescendantCheck.html",
+        "Fail_1": "HAAC_ActiveDescendantCheck.html",
+        "Fail_2": "HAAC_ActiveDescendantCheck.html",
+        "Fail_3": "HAAC_ActiveDescendantCheck.html",
+        "Fail_4": "HAAC_ActiveDescendantCheck.html",
+        "group": "HAAC_ActiveDescendantCheck.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The 'aria-activedescendant' property is empty",
+        "Fail_2": "The 'aria-activedescendant' property references a hidden node",
+        "Fail_3": "Element is not a combobox, and the referenced active-descendant element is not a valid descendant",
+        "Fail_4": "Element is a combobox, and the referenced active-descendant element is not controlled by this component",
+        "group": "The 'aria-activedescendant' property must reference the 'id' of a non-empty, non-hidden active child element"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "HAAC_Application_Role_Text",
+    "context": "aria:application",
+    "help": {
+      "en-US": {
+        "0": "HAAC_Application_Role_Text.html",
+        "Pass_0": "HAAC_Application_Role_Text.html",
+        "Potential_1": "HAAC_Application_Role_Text.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "Non-decorative static text and image content within an element with \"application\" role must be accessible",
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify that the non-decorative static text and image content within an element with \"application\" role are accessible"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_0",
+          "WCAG_2_1"
+        ],
+        "num": "2.1.1",
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "HAAC_Aria_ErrorMessage",
+    "context": "dom:*[aria-invalid=true]",
+    "help": {
+      "en-US": {
+        "Pass_0": "HAAC_Aria_ErrorMessage.html",
+        "Fail_1": "HAAC_Aria_ErrorMessage.html",
+        "Fail_2": "HAAC_Aria_ErrorMessage.html",
+        "group": "HAAC_Aria_ErrorMessage.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Custom error message has invalid reference 'id' value",
+        "Fail_2": "Custom error message is not visible",
+        "group": "A custom error message must reference a valid 'id' value and when triggered the message must be appropriately exposed"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "3.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "HAAC_Aria_ImgAlt",
+    "context": "aria:img",
+    "help": {
+      "en-US": {
+        "group": "HAAC_Aria_ImgAlt.html",
+        "Pass_0": "HAAC_Aria_ImgAlt.html",
+        "Fail_1": "HAAC_Aria_ImgAlt.html",
+        "Fail_2": "HAAC_Aria_ImgAlt.html",
+        "Fail_3": "HAAC_Aria_ImgAlt.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "An element with \"img\" role must have a non-empty label",
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Element with \"img\" role has no label",
+        "Fail_2": "Element with \"img\" role has no label or an empty label",
+        "Fail_3": "Element with \"img\" role missing non-empty 'aria-label' or 'aria-labelledby'"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": [
+      "23a2a8",
+      {
+        "7d6734": {
+          "Pass_0": "pass",
+          "Fail_1": "inapplicable",
+          "Fail_2": "fail",
+          "Fail_3": "inapplicable"
+        }
+      }
+    ]
+  },
+  {
+    "id": "HAAC_Aria_SvgAlt",
+    "context": "aria:graphics-document,aria:graphics-symbol",
+    "help": {
+      "en-US": {
+        "group": "HAAC_Aria_SvgAlt.html",
+        "Pass_0": "HAAC_Aria_SvgAlt.html",
+        "Fail_1": "HAAC_Aria_SvgAlt.html",
+        "Fail_2": "HAAC_Aria_SvgAlt.html",
+        "Fail_3": "HAAC_Aria_SvgAlt.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "An element with a graphics role must have a non-empty label",
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Element with \"{0}\" graphics role has no label",
+        "Fail_2": "Element with \"{0}\" graphics role has no label or an empty label",
+        "Fail_3": "Element with \"{0}\" graphics role missing non-empty 'aria-label' or 'aria-labelledby'"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": [
+      {
+        "7d6734": {
+          "Pass_0": "pass",
+          "Fail_1": "inapplicable",
+          "Fail_2": "fail",
+          "Fail_3": "inapplicable"
+        }
+      }
+    ]
+  },
+  {
+    "id": "HAAC_Audio_Video_Trigger",
+    "context": "dom:audio, dom:video",
+    "help": {
+      "en-US": {
+        "Pass_0": "HAAC_Audio_Video_Trigger.html",
+        "Manual_1": "HAAC_Audio_Video_Trigger.html",
+        "group": "HAAC_Audio_Video_Trigger.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Manual_1": "Verify media using <audio> and/or <video> elements have keyboard accessible controls",
+        "group": "Media using <audio> and/or <video> elements must have keyboard accessible controls"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "HAAC_BackgroundImg_HasTextOrTitle",
+    "context": "dom:*",
+    "help": {
+      "en-US": {
+        "Pass_0": "HAAC_BackgroundImg_HasTextOrTitle.html",
+        "Manual_1": "HAAC_BackgroundImg_HasTextOrTitle.html",
+        "group": "HAAC_BackgroundImg_HasTextOrTitle.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Manual_1": "Verify important background image information has a text alternative in system high contrast mode",
+        "group": "Background images that convey important information must have a text alternative that describes the image"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "HAAC_Canvas",
+    "context": "dom:canvas",
+    "help": {
+      "en-US": {
+        "Pass_0": "HAAC_Canvas.html",
+        "Manual_1": "HAAC_Canvas.html",
+        "group": "HAAC_Canvas.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Manual_1": "Verify accessibility of the <canvas> element",
+        "group": "The <canvas> element may not be accessible"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1",
+          "4.1.2"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "HAAC_Figure_label",
+    "context": "dom:figure",
+    "help": {
+      "en-US": {
+        "Pass_0": "HAAC_Figure_label.html",
+        "Fail_1": "HAAC_Figure_label.html",
+        "group": "HAAC_Figure_label.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The <figure> element does not have an associated label",
+        "group": "A <figure> element must have an associated label"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "HAAC_Img_UsemapAlt",
+    "context": "dom:img[usemap], dom:img[ismap]",
+    "help": {
+      "en-US": {
+        "Pass_0": "HAAC_Img_UsemapAlt.html",
+        "Fail_1": "HAAC_Img_UsemapAlt.html",
+        "group": "HAAC_Img_UsemapAlt.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Image map or child <area> has no text alternative",
+        "group": "An image map and each <area> element in an image map must have text alternative(s)"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "HAAC_Input_Placeholder",
+    "context": "dom:input[placeholder], dom:textarea[placeholder]",
+    "help": {
+      "en-US": {
+        "Pass_0": "HAAC_Input_Placeholder.html",
+        "Potential_1": "HAAC_Input_Placeholder.html",
+        "Potential_2": "HAAC_Input_Placeholder.html",
+        "group": "HAAC_Input_Placeholder.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "HTML5 placeholder is the only visible label",
+        "Potential_2": "Additional visible label referenced by 'aria-labelledby' is not valid",
+        "group": "HTML5 'placeholder' attribute must not be used as a visible label replacement"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "3.3.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "HAAC_List_Group_ListItem",
+    "context": "aria:group",
+    "help": {
+      "en-US": {
+        "Pass_0": "HAAC_List_Group_ListItem.html",
+        "Fail_1": "HAAC_List_Group_ListItem.html",
+        "group": "HAAC_List_Group_ListItem.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "List component with \"group\" role has children that are not <listitem> elements",
+        "group": "List component with \"group\" role must limit children to <listitem> elements"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "HAAC_Media_DocumentTrigger2",
+    "context": "dom:a[href],dom:area[href]",
+    "help": {
+      "en-US": {
+        "Pass_0": "HAAC_Media_DocumentTrigger2.html",
+        "Manual_1": "HAAC_Media_DocumentTrigger2.html",
+        "group": "HAAC_Media_DocumentTrigger2.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Manual_1": "Verify that the file download mechanism does not cause a keyboard trap",
+        "group": "File download mechanisms should be keyboard-operable and preserve page focus location"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.1.2"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "HAAC_Video_HasNoTrack",
+    "context": "dom:video",
+    "help": {
+      "en-US": {
+        "Pass_0": "HAAC_Video_HasNoTrack.html",
+        "Potential_1": "HAAC_Video_HasNoTrack.html",
+        "group": "HAAC_Video_HasNoTrack.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify that captions are available for any meaningful audio or provide a caption track for the <video> element",
+        "group": "A <video> element must have a text alternative for any meaningful audio content"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.2.1",
+          "1.2.2",
+          "1.2.4"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "IBMA_Color_Contrast_WCAG2AA",
+    "context": "dom:*",
+    "help": {
+      "en-US": {
+        "group": "IBMA_Color_Contrast_WCAG2AA.html",
+        "Pass_0": "IBMA_Color_Contrast_WCAG2AA.html",
+        "Fail_1": "IBMA_Color_Contrast_WCAG2AA.html",
+        "Potential_1": "IBMA_Color_Contrast_WCAG2AA.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "The contrast ratio of text with its background must meet WCAG 2.1 AA requirements",
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Text contrast of {0} with its background is less than the WCAG AA minimum requirements for text of size {1}px and weight of {2}",
+        "Potential_1": "The foreground text and its background color are both detected as {3}. Verify the text meets the WCAG 2.1 AA requirements for minimum contrast"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_0",
+          "WCAG_2_1"
+        ],
+        "num": "1.4.3",
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "IBMA_Color_Contrast_WCAG2AA_PV",
+    "context": "dom:*",
+    "dependencies": [
+      "IBMA_Color_Contrast_WCAG2AA"
+    ],
+    "help": {
+      "en-US": {
+        "group": "IBMA_Color_Contrast_WCAG2AA_PV.html",
+        "Pass_0": "IBMA_Color_Contrast_WCAG2AA_PV.html",
+        "Potential_1": "IBMA_Color_Contrast_WCAG2AA_PV.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "The contrast ratio of text with its background (i.e. background with a color gradient or a background image) must meet WCAG 2.1 AA requirements",
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify the contrast ratio of the text against the lightest and the darkest colors of the background meets the WCAG 2.1 AA minimum requirements for text of size {1}px and weight of {2}"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_0",
+          "WCAG_2_1"
+        ],
+        "num": "1.4.3",
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "IBMA_Focus_MultiTab",
+    "context": "aria:button,aria:link,aria:menuitem,aria:spinbutton,aria:tablist,aria:combobox,aria:listbox,aria:menu,aria:radiogroup,aria:tree,aria:checkbox,aria:option,aria:radio,aria:slider,aria:spinbutton,aria:textbox,aria:columnheader,aria:rowheader,aria:slider,aria:tab",
+    "help": {
+      "en-US": {
+        "pass": "IBMA_Focus_MultiTab.html",
+        "fail_multiple_tabbable": "IBMA_Focus_MultiTab.html",
+        "group": "IBMA_Focus_MultiTab.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "pass": "Rule Passed",
+        "fail_multiple_tabbable": "Component with \"{0}\" role has more than one tabbable element",
+        "group": "Certain components must have no more than one tabbable element"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.3"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "IBMA_Focus_Tabbable",
+    "context": "aria:button,aria:link,aria:spinbutton,aria:tablist,aria:combobox,aria:listbox,aria:menu,aria:radiogroup,aria:tree,aria:checkbox,aria:slider,aria:spinbutton,aria:textbox,aria:scrollbar,aria:slider,aria:spinbutton",
+    "help": {
+      "en-US": {
+        "pass": "IBMA_Focus_Tabbable.html",
+        "fail_no_tabbable": "IBMA_Focus_Tabbable.html",
+        "group": "IBMA_Focus_Tabbable.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "pass": "Rule Passed",
+        "fail_no_tabbable": "Component with \"{0}\" role does not have a tabbable element",
+        "group": "Component must have at least one tabbable element"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.3"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "input_haspopup_invalid",
+    "context": "dom:input[list][aria-haspopup]",
+    "help": {
+      "en-US": {
+        "Pass": "input_haspopup_invalid.html",
+        "Potential_1": "input_haspopup_invalid.html",
+        "Potential_2": "input_haspopup_invalid.html",
+        "group": "input_haspopup_invalid.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "<input> element with 'list' attribute does not use 'aria-haspopup' attribute",
+        "Potential_1": "<input> element with 'list' attribute also uses 'aria-haspopup' attribute with type=\"{0}\"",
+        "Potential_2": "<input> element with 'list' attribute also uses 'aria-haspopup' attribute with missing or invalid input type",
+        "group": "<input> element with 'list' attribute should not also use 'aria-haspopup' attribute"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "landmark_name_unique",
+    "context": "aria:complementary, aria:banner, aria:contentinfo, aria:main, aria:navigation, aria:region, aria:search, aria:form",
+    "help": {
+      "en-US": {
+        "Pass_0": "landmark_name_unique.html",
+        "Fail_0": "landmark_name_unique.html",
+        "group": "landmark_name_unique.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Multiple \"{0}\" landmarks with the same parent region are distinguished by unique 'aria-label' or 'aria-labelledby'",
+        "Fail_0": "Multiple \"{0}\" landmarks with the same parent region are not distinguished from one another because they have the same \"{1}\" label",
+        "group": "Multiple landmarks should have a unique 'aria-labelledby' or 'aria-label' or be nested in a different parent regions"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      },
+      {
+        "id": [
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "meta_viewport_zoom",
+    "context": "dom:meta[name][content]",
+    "help": {
+      "en-US": {
+        "group": "meta_viewport_zoom.html",
+        "Pass_0": "meta_viewport_zoom.html",
+        "Potential_1": "meta_viewport_zoom.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "The 'meta[name=viewport]' should not prevent the browser zooming the content",
+        "Pass_0": "The 'meta[name=viewport]' does not prevent the browser zooming the content",
+        "Potential_1": "Confirm the 'meta[name=viewport]' with \"{0}\" can be zoomed by user"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.4.4"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "3"
+      },
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1"
+        ],
+        "num": [
+          "1.4.10"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": [
+      {
+        "b4f0c3": {
+          "Pass_0": "pass",
+          "Potential_1": "fail"
+        }
+      }
+    ]
+  },
+  {
+    "id": "Rpt_Aria_ApplicationLandmarkLabel",
+    "context": "aria:application",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_ApplicationLandmarkLabel.html",
+        "Fail_1": "Rpt_Aria_ApplicationLandmarkLabel.html",
+        "group": "Rpt_Aria_ApplicationLandmarkLabel.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Element with \"application\" role does not have a label",
+        "group": "An element with \"application\" role must have a label that describes its purpose"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_ComplementaryLandmarkLabel_Implicit",
+    "context": "dom:*[role], dom:aside",
+    "dependencies": [
+      "Rpt_Aria_ComplementaryRequiredLabel_Implicit"
+    ],
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_ComplementaryLandmarkLabel_Implicit.html",
+        "Fail_1": "Rpt_Aria_ComplementaryLandmarkLabel_Implicit.html",
+        "group": "Rpt_Aria_ComplementaryLandmarkLabel_Implicit.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The element with \"complementary\" role does not have a visible label",
+        "group": "Each element with \"complementary\" role should have a visible label that describes its purpose"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_ComplementaryRequiredLabel_Implicit",
+    "context": "dom:*[role], dom:aside",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_ComplementaryRequiredLabel_Implicit.html",
+        "Fail_1": "Rpt_Aria_ComplementaryRequiredLabel_Implicit.html",
+        "group": "Rpt_Aria_ComplementaryRequiredLabel_Implicit.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The element with \"complementary\" role does not have a label",
+        "group": "An element with \"complementary\" role must have a label"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_ContentinfoWithNoMain_Implicit",
+    "context": "dom:*[role], dom:footer, dom:address",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_ContentinfoWithNoMain_Implicit.html",
+        "Fail_1": "Rpt_Aria_ContentinfoWithNoMain_Implicit.html",
+        "group": "Rpt_Aria_ContentinfoWithNoMain_Implicit.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The element with \"contentinfo\" role is present without an element with \"main\" role",
+        "group": "An element with \"contentinfo\" role is only permitted with an element with \"main\" role"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_EmptyPropertyValue",
+    "context": "dom:*[role]",
+    "dependencies": [
+      "Rpt_Aria_ValidRole"
+    ],
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_EmptyPropertyValue.html",
+        "Fail_1": "Rpt_Aria_EmptyPropertyValue.html",
+        "group": "Rpt_Aria_EmptyPropertyValue.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The element attribute(s): '{0}' value is empty",
+        "group": "When specifying a required ARIA attribute, the value must not be empty"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_EventHandlerMissingRole_Native_Host_Sematics",
+    "context": "dom:*[onclick],dom:*[onblur], dom:*[ondblclick], dom:*[onfocus], dom:*[onkeydown],dom:*[onkeypress], dom:*[onkeyup], dom:*[onmousedown], dom:*[onmouseup], dom:*[onmousemove], dom:*[onmouseout], dom:*[onmouseover], dom:*[onresize], dom:*[onchange]",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_EventHandlerMissingRole_Native_Host_Sematics.html",
+        "Fail_1": "Rpt_Aria_EventHandlerMissingRole_Native_Host_Sematics.html",
+        "group": "Rpt_Aria_EventHandlerMissingRole_Native_Host_Sematics.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The <{0}> element with '{1}' does not have a valid ARIA role specified",
+        "group": "Elements with event handlers must have a valid ARIA role"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_InvalidTabindexForActivedescendant",
+    "context": "dom:*[aria-activedescendant]",
+    "help": {
+      "en-US": {
+        "pass": "Rpt_Aria_InvalidTabindexForActivedescendant.html",
+        "Fail_1": "Rpt_Aria_InvalidTabindexForActivedescendant.html",
+        "group": "Rpt_Aria_InvalidTabindexForActivedescendant.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "pass": "Rule Passed",
+        "Fail_1": "The <{0}> element using 'aria-activedescendant' set to \"{1}\" is not tabbable",
+        "group": "Element using 'aria-activedescendant' property should be tabbable"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_MissingFocusableChild",
+    "context": "dom:*[role]",
+    "dependencies": [
+      "Rpt_Aria_ValidRole"
+    ],
+    "help": {
+      "en-US": {
+        "pass": "Rpt_Aria_MissingFocusableChild.html",
+        "fail_missing_child": "Rpt_Aria_MissingFocusableChild.html",
+        "group": "Rpt_Aria_MissingFocusableChild.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "pass": "Rule Passed",
+        "fail_missing_child": "None of the descendent elements with \"{1}\" role is tabbable",
+        "group": "UI component must have at least one tabbable descendant for keyboard access"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_MissingKeyboardHandler",
+    "context": "dom:*[role]",
+    "dependencies": [
+      "Rpt_Aria_ValidRole"
+    ],
+    "help": {
+      "en-US": {
+        "pass": "Rpt_Aria_MissingKeyboardHandler.html",
+        "potential_no_keyboard_access": "Rpt_Aria_MissingKeyboardHandler.html",
+        "group": "Rpt_Aria_MissingKeyboardHandler.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "pass": "Rule Passed",
+        "potential_no_keyboard_access": "Verify the <{0}> element with \"{1}\" role has keyboard access",
+        "group": "Interactive WAI_ARIA UI components must provide keyboard access"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_MultipleApplicationLandmarks",
+    "context": "aria:application",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_MultipleApplicationLandmarks.html",
+        "Fail_1": "Rpt_Aria_MultipleApplicationLandmarks.html",
+        "group": "Rpt_Aria_MultipleApplicationLandmarks.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Multiple elements with \"application\" role do not have unique labels",
+        "group": "Each element with \"application\" role must have a unique label that describes its purpose"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_MultipleArticleRoles_Implicit",
+    "context": "aria:article",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_MultipleArticleRoles_Implicit.html",
+        "Fail_1": "Rpt_Aria_MultipleArticleRoles_Implicit.html",
+        "group": "Rpt_Aria_MultipleArticleRoles_Implicit.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Multiple elements with \"article\" role do not have unique labels",
+        "group": "Each element with \"article\" role must have a unique label that describes its purpose"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_MultipleBannerLandmarks_Implicit",
+    "context": "aria:banner",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_MultipleBannerLandmarks_Implicit.html",
+        "Fail_1": "Rpt_Aria_MultipleBannerLandmarks_Implicit.html",
+        "group": "Rpt_Aria_MultipleBannerLandmarks_Implicit.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Multiple elements with \"banner\" role do not have unique labels",
+        "group": "Each element with \"banner\" role must have a unique label that describes its purpose"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_MultipleComplementaryLandmarks_Implicit",
+    "context": "aria:complementary",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_MultipleComplementaryLandmarks_Implicit.html",
+        "Fail_1": "Rpt_Aria_MultipleComplementaryLandmarks_Implicit.html",
+        "group": "Rpt_Aria_MultipleComplementaryLandmarks_Implicit.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Multiple elements with \"complementary\" role do not have unique labels",
+        "group": "Each element with \"complementary\" role must have a unique label that describes its purpose"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_MultipleContentinfoInSiblingSet_Implicit",
+    "context": "dom:*[role], dom:footer, dom:address",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_MultipleContentinfoInSiblingSet_Implicit.html",
+        "Fail_1": "Rpt_Aria_MultipleContentinfoInSiblingSet_Implicit.html",
+        "group": "Rpt_Aria_MultipleContentinfoInSiblingSet_Implicit.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Multiple elements with \"contentinfo\" role found on a page",
+        "group": "A page, document or application should only have one element with \"contentinfo\" role"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_MultipleContentinfoLandmarks_Implicit",
+    "context": "aria:contentinfo",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_MultipleContentinfoLandmarks_Implicit.html",
+        "Fail_1": "Rpt_Aria_MultipleContentinfoLandmarks_Implicit.html",
+        "group": "Rpt_Aria_MultipleContentinfoLandmarks_Implicit.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Multiple elements with \"contentinfo\" role do not have unique labels",
+        "group": "Each element with \"contentinfo\" role must have a unique label that describes its purpose"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_MultipleDocumentRoles",
+    "context": "aria:document",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_MultipleDocumentRoles.html",
+        "Fail_1": "Rpt_Aria_MultipleDocumentRoles.html",
+        "group": "Rpt_Aria_MultipleDocumentRoles.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Multiple elements with a \"document\" role do not have unique labels",
+        "group": "All elements with a \"document\" role must have unique labels"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_MultipleFormLandmarks_Implicit",
+    "context": "aria:form",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_MultipleFormLandmarks_Implicit.html",
+        "Fail_1": "Rpt_Aria_MultipleFormLandmarks_Implicit.html",
+        "group": "Rpt_Aria_MultipleFormLandmarks_Implicit.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Multiple elements with \"form\" role do not have unique labels",
+        "group": "Each element with \"form\" role must have a unique label that describes its purpose"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_MultipleMainsRequireLabel_Implicit_2",
+    "context": "aria:main",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_MultipleMainsRequireLabel_Implicit_2.html",
+        "Fail_1": "Rpt_Aria_MultipleMainsRequireLabel_Implicit_2.html",
+        "group": "Rpt_Aria_MultipleMainsRequireLabel_Implicit_2.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Multiple elements with \"main\" role do not have unique labels",
+        "group": "Elements with \"main\" role must have unique labels"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_MultipleMainsVisibleLabel_Implicit",
+    "context": "dom:body",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_MultipleMainsVisibleLabel_Implicit.html",
+        "Fail_1": "Rpt_Aria_MultipleMainsVisibleLabel_Implicit.html",
+        "group": "Rpt_Aria_MultipleMainsVisibleLabel_Implicit.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Multiple elements with \"main\" role do not have unique visible labels",
+        "group": "Each element with \"main\" role should have a unique visible label that describes its purpose"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_MultipleNavigationLandmarks_Implicit",
+    "context": "aria:navigation",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_MultipleNavigationLandmarks_Implicit.html",
+        "Fail_1": "Rpt_Aria_MultipleNavigationLandmarks_Implicit.html",
+        "group": "Rpt_Aria_MultipleNavigationLandmarks_Implicit.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Multiple elements with \"navigation\" role do not have unique labels",
+        "group": "Each element with \"navigation\" role must have a unique label that describes its purpose"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_MultipleRegionsUniqueLabel_Implicit",
+    "context": "aria:region",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_MultipleRegionsUniqueLabel_Implicit.html",
+        "Fail_1": "Rpt_Aria_MultipleRegionsUniqueLabel_Implicit.html",
+        "group": "Rpt_Aria_MultipleRegionsUniqueLabel_Implicit.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Multiple elements with \"region\" role do not have unique labels",
+        "group": "Each element with a \"region\" role must have a unique label"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_MultipleSearchLandmarks",
+    "context": "aria:search",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_MultipleSearchLandmarks.html",
+        "Fail_1": "Rpt_Aria_MultipleSearchLandmarks.html",
+        "group": "Rpt_Aria_MultipleSearchLandmarks.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Multiple elements with \"search\" role do not have unique labels",
+        "group": "Each element with \"search\" role must have a unique label that describes its purpose"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_MultipleToolbarUniqueLabel",
+    "context": "aria:toolbar",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_MultipleToolbarUniqueLabel.html",
+        "Fail_1": "Rpt_Aria_MultipleToolbarUniqueLabel.html",
+        "group": "Rpt_Aria_MultipleToolbarUniqueLabel.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Multiple toolbar components do not have unique labels",
+        "group": "All toolbar components on a page must have unique labels specified"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_OneBannerInSiblingSet_Implicit",
+    "context": "dom:*[role], dom:header",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_OneBannerInSiblingSet_Implicit.html",
+        "Fail_1": "Rpt_Aria_OneBannerInSiblingSet_Implicit.html",
+        "group": "Rpt_Aria_OneBannerInSiblingSet_Implicit.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "There is more than one element with \"banner\" role on the page",
+        "group": "There must be only one element with \"banner\" role on the page"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_OrphanedContent_Native_Host_Sematics",
+    "context": "dom:*",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_OrphanedContent_Native_Host_Sematics.html",
+        "Fail_1": "Rpt_Aria_OrphanedContent_Native_Host_Sematics.html",
+        "group": "Rpt_Aria_OrphanedContent_Native_Host_Sematics.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Content is not within a landmark element",
+        "group": "All content must reside within an element with a landmark role"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      },
+      {
+        "id": [
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_RegionLabel_Implicit",
+    "context": "dom:*[role], dom:section",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_RegionLabel_Implicit.html",
+        "Fail_1": "Rpt_Aria_RegionLabel_Implicit.html",
+        "Fail_2": "Rpt_Aria_RegionLabel_Implicit.html",
+        "group": "Rpt_Aria_RegionLabel_Implicit.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Section element with an implicit \"region\" role is not labeled with an 'aria-label' or 'aria-labelledby'",
+        "Fail_2": "The element with \"region\" role is not labeled with an 'aria-label' or 'aria-labelledby'",
+        "group": "Each element with \"region\" role must have a label that describes its purpose"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Rpt_Aria_RequiredParent_Native_Host_Sematics",
+    "context": "dom:*[role]",
+    "dependencies": [
+      "Rpt_Aria_ValidRole"
+    ],
+    "help": {
+      "en-US": {
+        "group": "Rpt_Aria_RequiredParent_Native_Host_Sematics.html",
+        "Pass_0": "Rpt_Aria_RequiredParent_Native_Host_Sematics.html",
+        "Fail_1": "Rpt_Aria_RequiredParent_Native_Host_Sematics.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "An element with an implicit or explicit role must be contained within a valid element",
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The element with role \"{0}\" is not contained in or owned by an element with one of the following roles: \"{1}\""
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": "ff89c9"
+  },
+  {
+    "id": "Rpt_Aria_RequiredProperties",
+    "context": "dom:*[role]",
+    "dependencies": [
+      "Rpt_Aria_ValidRole"
+    ],
+    "help": {
+      "en-US": {
+        "group": "Rpt_Aria_RequiredProperties.html",
+        "Pass_0": "Rpt_Aria_RequiredProperties.html",
+        "Fail_1": "Rpt_Aria_RequiredProperties.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "When using a ARIA role on an element, the required attributes for that role must be defined",
+        "Pass_0": "Rule Passed",
+        "Fail_1": "An element with ARIA role '{0}' does not have the required ARIA attribute(s): '{1}'"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_0",
+          "WCAG_2_1"
+        ],
+        "num": "4.1.2",
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": "4e8ab6"
+  },
+  {
+    "id": "Rpt_Aria_ValidIdRef",
+    "context": "dom:*",
+    "help": {
+      "en-US": {
+        "Pass_0": "Rpt_Aria_ValidIdRef.html",
+        "Fail_1": "Rpt_Aria_ValidIdRef.html",
+        "group": "Rpt_Aria_ValidIdRef.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The 'id' \"{0}\" specified for the ARIA property '{1}' value is not valid",
+        "group": "The ARIA property must reference a non-empty unique id of an existing element that is visible"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": [
+      "59796f",
+      "6a7281"
+    ]
+  },
+  {
+    "id": "Rpt_Aria_ValidProperty",
+    "context": "dom:*",
+    "help": {
+      "en-US": {
+        "group": "Rpt_Aria_ValidProperty.html",
+        "Pass_0": "Rpt_Aria_ValidProperty.html",
+        "Fail_1": "Rpt_Aria_ValidProperty.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "ARIA attributes must be valid for the element's role",
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The attribute(s) '{0}' referenced by the element <{1}> is not a valid ARIA state or property"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_0",
+          "WCAG_2_1"
+        ],
+        "num": "4.1.2",
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": "5f99a7"
+  },
+  {
+    "id": "Rpt_Aria_ValidPropertyValue",
+    "context": "dom:*",
+    "help": {
+      "en-US": {
+        "group": "Rpt_Aria_ValidPropertyValue.html",
+        "Pass_0": "Rpt_Aria_ValidPropertyValue.html",
+        "Fail_1": "Rpt_Aria_ValidPropertyValue.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "ARIA property values must be valid",
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The value \"{0}\" specified for attribute '{1}' on element <{2}> is not valid"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": "6a7281"
+  },
+  {
+    "id": "Rpt_Aria_ValidRole",
+    "context": "dom:*[role]",
+    "help": {
+      "en-US": {
+        "group": "Rpt_Aria_ValidRole.html",
+        "Pass_0": "Rpt_Aria_ValidRole.html",
+        "Fail_2": "Rpt_Aria_ValidRole.html",
+        "Potential_1": "Rpt_Aria_ValidRole.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "Elements must have a valid 'role' per ARIA specification",
+        "Pass_0": "Rule Passed",
+        "Fail_2": "The role '{0}' defined on the element is not valid per ARIA specification",
+        "Potential_1": "Some of the roles, '{0}', defined on the element are not valid per ARIA specification"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_0",
+          "WCAG_2_1"
+        ],
+        "num": "4.1.2",
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": "674b10"
+  },
+  {
+    "id": "Rpt_Aria_WidgetLabels_Implicit",
+    "context": "dom:*",
+    "help": {
+      "en-US": {
+        "group": "Rpt_Aria_WidgetLabels_Implicit.html",
+        "Pass_0": "Rpt_Aria_WidgetLabels_Implicit.html",
+        "Fail_1": "Rpt_Aria_WidgetLabels_Implicit.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "Interactive component must have a programmatically associated name",
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Interactive component with ARIA role '{0}' does not have a programmatically associated name"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": "m6b1q3"
+  },
+  {
+    "id": "RPT_Blink_CSSTrigger1",
+    "context": "dom:style, dom:*[style]",
+    "help": {
+      "en-US": {
+        "group": "RPT_Blink_CSSTrigger1.html",
+        "Pass_0": "RPT_Blink_CSSTrigger1.html",
+        "Potential_1": "RPT_Blink_CSSTrigger1.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "Do not use the \"blink\" value of the 'text-decoration' property for longer than five seconds",
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Check the \"blink\" value of the CSS 'text-decoration' property is not used for more than than five seconds"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_0",
+          "WCAG_2_1"
+        ],
+        "num": "2.2.2",
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Block_ShouldBeHeading",
+    "context": "dom:p, dom:div, dom:br",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Block_ShouldBeHeading.html",
+        "Potential_1": "RPT_Block_ShouldBeHeading.html",
+        "group": "RPT_Block_ShouldBeHeading.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Check if this text should be marked up as a heading: {0}",
+        "group": "Heading text must use a heading element"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Blockquote_HasCite",
+    "context": "dom:blockquote",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Blockquote_HasCite.html",
+        "Potential_1": "RPT_Blockquote_HasCite.html",
+        "group": "RPT_Blockquote_HasCite.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify that <blockquote> is used only for quotations, not indentation",
+        "group": "Use <blockquote> only for quotations, not indentation"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Elem_EventMouseAndKey",
+    "context": "dom:*[ondblclick], dom:*[onmousemove], dom:*[onmousedown], dom:*[onmouseup], dom:*[onmouseover], dom:*[onmouseout], dom:*[onclick]",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Elem_EventMouseAndKey.html",
+        "Manual_1": "RPT_Elem_EventMouseAndKey.html",
+        "group": "RPT_Elem_EventMouseAndKey.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Manual_1": "Confirm the <{0}> element with mouse event handler(s) '{1}' has a corresponding keyboard handler(s)",
+        "group": "All interactive content with mouse event handlers must have equivalent keyboard access"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.1.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Elem_UniqueId",
+    "context": "dom:*[id]",
+    "help": {
+      "en-US": {
+        "group": "RPT_Elem_UniqueId.html",
+        "Pass_0": "RPT_Elem_UniqueId.html",
+        "Fail_1": "RPT_Elem_UniqueId.html",
+        "Fail_2": "RPT_Elem_UniqueId.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "Element 'id' attribute values must be unique within a document",
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The <{0}> element has the id \"{1}\" that is empty",
+        "Fail_2": "The <{0}> element has the id \"{1}\" that is already in use"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": [
+      {
+        "3ea0c8": {
+          "Pass_0": "pass",
+          "Fail_1": "pass",
+          "Fail_2": "fail"
+        }
+      }
+    ]
+  },
+  {
+    "id": "RPT_Embed_AutoStart",
+    "context": "dom:param[name=autoplay], dom:param[name=autostart], dom:embed[flashvars], dom:embed[src], dom:*[autostart=true], dom:*[autostart=1], dom:bgsound",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Embed_AutoStart.html",
+        "Potential_1": "RPT_Embed_AutoStart.html",
+        "group": "RPT_Embed_AutoStart.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify there is a mechanism to pause or stop and control the volume for the audio that plays automatically",
+        "group": "Mechanism must be available to pause or stop and control the volume of the audio that plays automatically"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.4.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Embed_HasAlt",
+    "context": "dom:embed",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Embed_HasAlt.html",
+        "Potential_1": "RPT_Embed_HasAlt.html",
+        "group": "RPT_Embed_HasAlt.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify that the <embed> element has alternative content",
+        "group": "Provide alternative content for <embed> elements"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "4"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Font_ColorInForm",
+    "context": "dom:form",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Font_ColorInForm.html",
+        "Potential_1": "RPT_Font_ColorInForm.html",
+        "group": "RPT_Font_ColorInForm.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Check color is not used as the only visual means to convey which fields are required",
+        "group": "Combine color and descriptive markup to indicate required form fields"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Form_ChangeEmpty",
+    "context": "dom:select[onchange], dom:input[onchange]",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Form_ChangeEmpty.html",
+        "Potential_1": "RPT_Form_ChangeEmpty.html",
+        "group": "RPT_Form_ChangeEmpty.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Confirm the form does not submit automatically without warning",
+        "group": "A form should not be submitted automatically without warning the user"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "3.2.2"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Header_HasContent",
+    "context": "dom:h1, dom:h2, dom:h3, dom:h4, dom:h5, dom:h6",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Header_HasContent.html",
+        "Fail_1": "RPT_Header_HasContent.html",
+        "group": "RPT_Header_HasContent.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Heading element has no descriptive content",
+        "group": "Heading elements must provide descriptive text"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.6"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Headers_FewWords",
+    "context": "dom:h1, dom:h2, dom:h3, dom:h4, dom:h5, dom:h6",
+    "dependencies": [
+      "RPT_Header_HasContent"
+    ],
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Headers_FewWords.html",
+        "Potential_1": "RPT_Headers_FewWords.html",
+        "group": "RPT_Headers_FewWords.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify that the heading element is a genuine heading",
+        "group": "Heading elements must not be used for presentation"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Html_SkipNav",
+    "context": "dom:html",
+    "help": {
+      "en-US": {
+        "group": "RPT_Html_SkipNav.html",
+        "Pass_0": "RPT_Html_SkipNav.html",
+        "Potential_1": "RPT_Html_SkipNav.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "Provide a way to bypass blocks of content that are repeated on multiple Web pages",
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify there is a way to bypass blocks of content that are repeated on multiple Web pages"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_0",
+          "WCAG_2_1"
+        ],
+        "num": "2.4.1",
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Img_AltCommonMisuse",
+    "context": "dom:img, dom:area, dom:input",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Img_AltCommonMisuse.html",
+        "Potential_1": "RPT_Img_AltCommonMisuse.html",
+        "group": "RPT_Img_AltCommonMisuse.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify that the file name serves as a good inline replacement for the image",
+        "group": "'alt' attribute value must be a good inline replacement for the image"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Img_LongDescription2",
+    "context": "dom:img[longdesc]",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Img_LongDescription2.html",
+        "Potential_1": "RPT_Img_LongDescription2.html",
+        "group": "RPT_Img_LongDescription2.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify that the file designated by the 'longdesc' attribute contains valid HTML content (file extension not recognized)",
+        "group": " The 'longdesc' attribute must reference HTML content"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Img_UsemapValid",
+    "context": "dom:img[ismap]",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Img_UsemapValid.html",
+        "Potential_1": "RPT_Img_UsemapValid.html",
+        "group": "RPT_Img_UsemapValid.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Server-side image map hot-spots do not have duplicate text links",
+        "group": "Server-side image map hot-spots must have duplicate text links"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Label_UniqueFor",
+    "context": "dom:label[for]",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Label_UniqueFor.html",
+        "Fail_1": "RPT_Label_UniqueFor.html",
+        "group": "RPT_Label_UniqueFor.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Form control has more than one label",
+        "group": "Form controls should have exactly one label"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_List_Misuse",
+    "context": "dom:dl, dom:ul, dom:ol, dom:dir, dom:menu, dom:li, dom:dd, dom:dt",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_List_Misuse.html",
+        "Potential_1": "RPT_List_Misuse.html",
+        "group": "RPT_List_Misuse.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "List element is missing or improperly structured",
+        "group": "List elements should only be used for lists of related items"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_List_UseMarkup",
+    "context": "dom:*",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_List_UseMarkup.html",
+        "Potential_1": "RPT_List_UseMarkup.html",
+        "group": "RPT_List_UseMarkup.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify whether this is a list that should use HTML list elements",
+        "group": "Use proper HTML list elements to create lists"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Marquee_Trigger",
+    "context": "dom:marquee",
+    "help": {
+      "en-US": {
+        "Passed_0": "RPT_Marquee_Trigger.html",
+        "Fail_1": "RPT_Marquee_Trigger.html",
+        "group": "RPT_Marquee_Trigger.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Passed_0": "Rule Passed",
+        "Fail_1": "Scrolling content found that uses the obsolete <marquee> element",
+        "group": "The <marquee> element is obsolete and should not be used"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.2.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Media_AltBrief",
+    "context": "dom:img[alt], dom:applet[alt], dom:area[alt], dom:embed[alt], dom:input[type][alt]",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Media_AltBrief.html",
+        "Potential_1": "RPT_Media_AltBrief.html",
+        "group": "RPT_Media_AltBrief.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Text alternative is more than 150 characters",
+        "group": "Alternative text in 'alt' attribute should be brief (<150 characters)"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Media_AudioTrigger",
+    "context": "dom:bgsound, dom:a[href], dom:area[href], dom:embed, dom:object",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Media_AudioTrigger.html",
+        "Manual_1": "RPT_Media_AudioTrigger.html",
+        "group": "RPT_Media_AudioTrigger.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Manual_1": "Provide transcripts for audio files",
+        "group": "Audio information should also be available in text form"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.2.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Media_AudioVideoAltFilename",
+    "context": "dom:area[alt], dom:embed[alt]",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Media_AudioVideoAltFilename.html",
+        "Potential_1": "RPT_Media_AudioVideoAltFilename.html",
+        "group": "RPT_Media_AudioVideoAltFilename.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Filename used as label for embedded audio or video",
+        "group": "Audio or video on the page must have a short text alternative that describes the media content"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Media_VideoObjectTrigger",
+    "context": "dom:embed, dom:object",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Media_VideoObjectTrigger.html",
+        "Manual_1": "RPT_Media_VideoObjectTrigger.html",
+        "group": "RPT_Media_VideoObjectTrigger.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Manual_1": "Verify captions are provided for live media (streaming video with audio)",
+        "group": "Live media (streaming video with audio) should have captions for audio content"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.2.4"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Media_VideoReferenceTrigger",
+    "context": "dom:a[href], dom:area[href], dom:applet, dom:embed, dom:object",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Media_VideoReferenceTrigger.html",
+        "Manual_1": "RPT_Media_VideoReferenceTrigger.html",
+        "group": "RPT_Media_VideoReferenceTrigger.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Manual_1": "Verify availability of a user-selectable audio track with description of visual content",
+        "group": "Pre-recorded media should have an audio track that describes visual information"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.2.3",
+          "1.2.5"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Meta_Refresh",
+    "context": "dom:meta[http-equiv][content]",
+    "help": {
+      "en-US": {
+        "group": "RPT_Meta_Refresh.html",
+        "Pass_0": "RPT_Meta_Refresh.html",
+        "Potential_1": "RPT_Meta_Refresh.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "Pages should not refresh automatically",
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify page is not being caused to refresh automatically"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.2.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": [
+      "bisz58",
+      "bc659a"
+    ]
+  },
+  {
+    "id": "RPT_Pre_ASCIIArt",
+    "context": "dom:pre, dom:listing, dom:xmp, dom:plaintext",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Pre_ASCIIArt.html",
+        "Potential_1": "RPT_Pre_ASCIIArt.html",
+        "group": "RPT_Pre_ASCIIArt.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify that ASCII art has a text alternative",
+        "group": "ASCII art must have a text alternative"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Script_OnclickHTML1",
+    "context": "dom:*[onclick]",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Script_OnclickHTML1.html",
+        "Potential_1": "RPT_Script_OnclickHTML1.html",
+        "group": "RPT_Script_OnclickHTML1.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Possible use of a script to emulate a link",
+        "group": "Scripts should not be used to emulate links"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Script_OnclickHTML2",
+    "context": "dom:*[onclick]",
+    "dependencies": [
+      "RPT_Script_OnclickHTML1"
+    ],
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Script_OnclickHTML2.html",
+        "Potential_1": "RPT_Script_OnclickHTML2.html",
+        "group": "RPT_Script_OnclickHTML2.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify that 'onclick' events are not used in script to emulate a link",
+        "group": "Scripts should not be used to emulate links"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "4"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Style_BackgroundImage",
+    "context": "dom:style, dom:*[style]",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Style_BackgroundImage.html",
+        "Potential_1": "RPT_Style_BackgroundImage.html",
+        "group": "RPT_Style_BackgroundImage.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify the CSS background image does not convey important information",
+        "group": "Images included by using CSS alone must not convey important information"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Style_ColorSemantics1",
+    "context": "dom:style, dom:*[style], dom:font[color], dom:link",
+    "help": {
+      "en-US": {
+        "group": "RPT_Style_ColorSemantics1.html",
+        "Pass_0": "RPT_Style_ColorSemantics1.html",
+        "Potential_1": "RPT_Style_ColorSemantics1.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "Combine color and descriptive markup to convey information",
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify color is not used as the only visual means of conveying information"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_0",
+          "WCAG_2_1"
+        ],
+        "num": "1.4.1",
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Style_HinderFocus1",
+    "context": "dom:*",
+    "help": {
+      "en-US": {
+        "group": "RPT_Style_HinderFocus1.html",
+        "Potential_1": "RPT_Style_HinderFocus1.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "The keyboard focus indicator must be highly visible when default border or outline is modified by CSS",
+        "Potential_1": "Check the keyboard focus indicator is highly visible when using CSS declaration for 'border' or 'outline'"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_0",
+          "WCAG_2_1"
+        ],
+        "num": "2.4.7",
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Style_Trigger2",
+    "context": "dom:style, dom:link, dom:*[style]",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Style_Trigger2.html",
+        "Manual_1": "RPT_Style_Trigger2.html",
+        "group": "RPT_Style_Trigger2.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Manual_1": "Confirm Windows high contrast mode is supported when using CSS to include, position or alter non-decorative content",
+        "group": "Windows high contrast mode must be supported when using CSS to include, position or alter non-decorative content"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      },
+      {
+        "id": [
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Table_DataHeadingsAria",
+    "context": "dom:table",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Table_DataHeadingsAria.html",
+        "Fail_1": "RPT_Table_DataHeadingsAria.html",
+        "group": "RPT_Table_DataHeadingsAria.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Table has no headers identified",
+        "group": "Data table must identify headers"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Table_LayoutTrigger",
+    "context": "dom:table",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Table_LayoutTrigger.html",
+        "Potential_1": "RPT_Table_LayoutTrigger.html",
+        "group": "RPT_Table_LayoutTrigger.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify table is not being used to format text content in columns unless the table can be linearized",
+        "group": "Avoid using tables to format text documents in columns unless the table can be linearized"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "4"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Text_SensoryReference",
+    "context": "dom:body, dom:body dom:*",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Text_SensoryReference.html",
+        "Potential_1": "RPT_Text_SensoryReference.html",
+        "group": "RPT_Text_SensoryReference.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "If the word(s) '{0}' is part of instructions for using page content, check it is still understandable without this location or shape information",
+        "group": "Instructions must be meaningful without shape or location words"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.3"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "RPT_Title_Valid",
+    "context": "dom:head dom:title",
+    "help": {
+      "en-US": {
+        "Pass_0": "RPT_Title_Valid.html",
+        "Fail_1": "RPT_Title_Valid.html",
+        "Potential_2": "RPT_Title_Valid.html",
+        "group": "RPT_Title_Valid.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Page <title> is empty",
+        "Potential_2": "Verify that using the filename as the page <title> value is descriptive",
+        "group": "Page <title> should be a descriptive title, rather than a filename"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "style_hover_persistent",
+    "context": "dom:style, dom:*[style], dom:*",
+    "help": {
+      "en-US": {
+        "Pass_0": "style_hover_persistent.html",
+        "Pass_1": "style_hover_persistent.html",
+        "Pass_2": "style_hover_persistent.html",
+        "Potential_1": "style_hover_persistent.html",
+        "Potential_2": "style_hover_persistent.html",
+        "Potential_3": "style_hover_persistent.html",
+        "group": "style_hover_persistent.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "the hover: pseudo-class is not used to display content",
+        "Pass_1": "content displayed via the :hover pseudo-class is a direct child of the trigger element",
+        "Pass_2": "content displayed via the :hover pseudo-class is the adjacent sibling of the trigger element",
+        "Potential_1": "Confirm the pointer can be positioned over the displayed element, not just the trigger",
+        "Potential_2": "Confirm the pointer can be positioned over all the information displayed on hover",
+        "Potential_3": "Confirm the margin style attribute has not prevented the pointer from hovering over the displayed element, not just the trigger",
+        "group": "The pointer should be able to move over content displayed on hover"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1"
+        ],
+        "num": [
+          "1.4.13"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "table_aria_descendants",
+    "context": "aria:table dom:tr[role], aria:table dom:th[role], aria:table dom:td[role], aria:grid dom:tr[role], aria:grid dom:th[role], aria:grid dom:td[role], aria:treegrid dom:tr[role], aria:treegrid dom:th[role], aria:treegrid dom:td[role]",
+    "help": {
+      "en-US": {
+        "group": "table_aria_descendants.html",
+        "explicit_role": "table_aria_descendants.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "Table structure elements cannot specify an explicit 'role' within table containers",
+        "explicit_role": "An explicit ARIA 'role' is not valid for <{0}> element within a ARIA role '{1}' per the ARIA in HTML specification"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "table_headers_ref_valid",
+    "context": "dom:td[headers], dom:th[headers]",
+    "help": {
+      "en-US": {
+        "Pass_0": "table_headers_ref_valid.html",
+        "Fail_1": "table_headers_ref_valid.html",
+        "Fail_2": "table_headers_ref_valid.html",
+        "Fail_3": "table_headers_ref_valid.html",
+        "Fail_4": "table_headers_ref_valid.html",
+        "group": "table_headers_ref_valid.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The 'headers' attribute value \"{0}\" does not reference a valid 'id' in this document",
+        "Fail_2": "The 'headers' attribute value \"{0}\" refers to itself",
+        "Fail_3": "The 'headers' attribute value \"{0}\" does not refer to a cell in the same table",
+        "Fail_4": "The 'headers' attribute value \"{0}\" does not refer to a cell indicated with <th> or a role of \"columnheader\" or \"rowheader\"",
+        "group": "The 'headers' attribute should refer to a valid cell in the same table"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": [
+      "a25f45"
+    ]
+  },
+  {
+    "id": "text_quoted_correctly",
+    "context": "dom:*",
+    "help": {
+      "en-US": {
+        "Pass_0": "text_quoted_correctly.html",
+        "Potential_1": "text_quoted_correctly.html",
+        "group": "text_quoted_correctly.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "If the following text is a quotation, mark it as a <q> or <blockquote> element: {0}",
+        "group": "Quotations should be marked with <q> or <blockquote> elements"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Valerie_Caption_HasContent",
+    "context": "dom:caption",
+    "help": {
+      "en-US": {
+        "Pass_0": "Valerie_Caption_HasContent.html",
+        "Fail_1": "Valerie_Caption_HasContent.html",
+        "group": "Valerie_Caption_HasContent.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The <table> element has an empty <caption> element",
+        "group": "A <caption> element for a <table> element must contain descriptive text"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Valerie_Caption_InTable",
+    "context": "dom:caption",
+    "help": {
+      "en-US": {
+        "Pass_0": "Valerie_Caption_InTable.html",
+        "Fail_1": "Valerie_Caption_InTable.html",
+        "group": "Valerie_Caption_InTable.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "<caption> element is not nested inside a <table> element",
+        "group": "The <caption> element must be nested inside the associated <table> element"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Valerie_Elem_DirValid",
+    "context": "dom:*[dir]",
+    "help": {
+      "en-US": {
+        "Pass_0": "Valerie_Elem_DirValid.html",
+        "Fail_1": "Valerie_Elem_DirValid.html",
+        "group": "Valerie_Elem_DirValid.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Invalid value used for the 'dir' attribute",
+        "group": "'dir' attribute value must be \"ltr\", \"rtl\", or \"auto\""
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Valerie_Frame_SrcHtml",
+    "context": "dom:frame, dom:iframe",
+    "help": {
+      "en-US": {
+        "Pass_0": "Valerie_Frame_SrcHtml.html",
+        "Potential_1": "Valerie_Frame_SrcHtml.html",
+        "group": "Valerie_Frame_SrcHtml.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify <frame> content is accessible",
+        "group": "A <frame> containing non-HTML content must be made accessible"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Valerie_Label_HasContent",
+    "context": "dom:label",
+    "help": {
+      "en-US": {
+        "Pass_Regular": "Valerie_Label_HasContent.html",
+        "Pass_AriaLabel": "Valerie_Label_HasContent.html",
+        "Pass_LabelledBy": "Valerie_Label_HasContent.html",
+        "Fail_1": "Valerie_Label_HasContent.html",
+        "group": "Valerie_Label_HasContent.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_Regular": "<label> element has accessible name with inner content",
+        "Pass_AriaLabel": "<label> element has accessible name via 'aria-label'",
+        "Pass_LabelledBy": "<label> element has accessible name via 'aria-labelledby'",
+        "Fail_1": "The <label> element does not have descriptive text that identifies the expected input",
+        "group": "A <label> element must have non-empty descriptive text that identifies the purpose of the interactive component"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Valerie_Noembed_HasContent",
+    "context": "dom:noembed",
+    "help": {
+      "en-US": {
+        "Pass_0": "Valerie_Noembed_HasContent.html",
+        "Potential_1": "Valerie_Noembed_HasContent.html",
+        "group": "Valerie_Noembed_HasContent.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Add descriptive text to the <noembed> element",
+        "group": "<noembed> elements should contain descriptive text"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "4"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "Valerie_Table_DataCellRelationships",
+    "context": "dom:td, dom:th",
+    "help": {
+      "en-US": {
+        "Pass_0": "Valerie_Table_DataCellRelationships.html",
+        "Fail_1": "Valerie_Table_DataCellRelationships.html",
+        "group": "Valerie_Table_DataCellRelationships.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Complex table does not have headers for each cell properly defined with 'header' or 'scope'",
+        "group": "For a complex data table, all <th> and <td> elements must be related via 'header' or 'scope' attributes"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_A_HasText",
+    "context": "aria:link,aria:doc-biblioref",
+    "help": {
+      "en-US": {
+        "group": "WCAG20_A_HasText.html",
+        "Pass_0": "WCAG20_A_HasText.html",
+        "Fail_1": "WCAG20_A_HasText.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "Hyperlinks must have a text description of their purpose",
+        "Pass_0": "Hyperlink has a description of its purpose",
+        "Fail_1": "Hyperlink has no link text, label or image with a text alternative"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_0",
+          "WCAG_2_1"
+        ],
+        "num": "2.4.4",
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": "c487ae"
+  },
+  {
+    "id": "WCAG20_A_TargetAndText",
+    "context": "dom:a[target],dom:area[target],dom:base[target]",
+    "help": {
+      "en-US": {
+        "group": "WCAG20_A_TargetAndText.html",
+        "Pass_0": "WCAG20_A_TargetAndText.html",
+        "Potential_1": "WCAG20_A_TargetAndText.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "Users should be warned in advance if their input action will open a new window or otherwise change their context",
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Inform the user when their input action will open a new window or otherwise change their context"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_0",
+          "WCAG_2_1"
+        ],
+        "num": "3.2.2",
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Applet_HasAlt",
+    "context": "dom:applet",
+    "help": {
+      "en-US": {
+        "group": "WCAG20_Applet_HasAlt.html",
+        "Pass_0": "WCAG20_Applet_HasAlt.html",
+        "Fail_1": "WCAG20_Applet_HasAlt.html",
+        "Fail_2": "WCAG20_Applet_HasAlt.html",
+        "Fail_3": "WCAG20_Applet_HasAlt.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "<applet> elements must provide an 'alt' attribute and an alternative description",
+        "Pass_0": "Rule Passed",
+        "Fail_1": "An <applet> element does not have an 'alt' attribute that provides a short text alternative",
+        "Fail_2": "The 'alt' attribute value for an <applet> element duplicates the 'code' attribute",
+        "Fail_3": "An <applet> element provides alternative text, but does not provide inner content"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_0",
+          "WCAG_2_1"
+        ],
+        "num": "1.1.1",
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Area_HasAlt",
+    "context": "dom:area",
+    "help": {
+      "en-US": {
+        "group": "WCAG20_Area_HasAlt.html",
+        "Pass_0": "WCAG20_Area_HasAlt.html",
+        "Fail_1": "WCAG20_Area_HasAlt.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "<area> elements in an image map must have a text alternative",
+        "Pass_0": "Rule Passed",
+        "Fail_1": "<area> element in an image map has no text alternative"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_0",
+          "WCAG_2_1"
+        ],
+        "num": "1.1.1",
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Blink_AlwaysTrigger",
+    "context": "dom:blink",
+    "help": {
+      "en-US": {
+        "group": "WCAG20_Blink_AlwaysTrigger.html",
+        "Pass_0": "WCAG20_Blink_AlwaysTrigger.html",
+        "Fail_1": "WCAG20_Blink_AlwaysTrigger.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "Content that blinks persistently must not be used",
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Content found that blinks persistently"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_0",
+          "WCAG_2_1"
+        ],
+        "num": "2.2.2",
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Body_FirstAContainsSkipText_Native_Host_Sematics",
+    "context": "dom:body",
+    "dependencies": [
+      "WCAG20_Body_FirstASkips_Native_Host_Sematics"
+    ],
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Body_FirstAContainsSkipText_Native_Host_Sematics.html",
+        "Potential_1": "WCAG20_Body_FirstAContainsSkipText_Native_Host_Sematics.html",
+        "group": "WCAG20_Body_FirstAContainsSkipText_Native_Host_Sematics.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify that if this hyperlink skips content, the description communicates where it links to",
+        "group": "The description of a hyperlink used to skip content must communicate where it links to"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Body_FirstASkips_Native_Host_Sematics",
+    "context": "dom:body",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Body_FirstASkips_Native_Host_Sematics.html",
+        "Fail_1": "WCAG20_Body_FirstASkips_Native_Host_Sematics.html",
+        "group": "WCAG20_Body_FirstASkips_Native_Host_Sematics.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The page does not provide a way to quickly navigate to the main content (ARIA \"main\" landmark or a skip link)",
+        "group": "Pages must provide a way to skip directly to the main content"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Doc_HasTitle",
+    "context": "dom:html",
+    "help": {
+      "en-US": {
+        "group": "WCAG20_Doc_HasTitle.html",
+        "Pass_0": "WCAG20_Doc_HasTitle.html",
+        "Fail_1": "WCAG20_Doc_HasTitle.html",
+        "Fail_2": "WCAG20_Doc_HasTitle.html",
+        "Fail_3": "WCAG20_Doc_HasTitle.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "The page should have a title that correctly identifies the subject of the page",
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Missing <head> element so there can be no <title> element present",
+        "Fail_2": "Missing <title> element in <head> element",
+        "Fail_3": "The <title> element is empty (no innerHTML)"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": [
+      {
+        "2779a5": {
+          "Pass_0": "pass",
+          "Fail_1": "pass",
+          "Fail_2": "fail",
+          "Fail_3": "fail"
+        }
+      }
+    ]
+  },
+  {
+    "id": "WCAG20_Elem_UniqueAccessKey",
+    "context": "dom:*[accesskey]",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Elem_UniqueAccessKey.html",
+        "Fail_1": "WCAG20_Elem_UniqueAccessKey.html",
+        "group": "WCAG20_Elem_UniqueAccessKey.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "'accesskey' attribute value on the element is not unique",
+        "group": "'accesskey' attribute values on each element must be unique for the page"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Embed_HasNoEmbed",
+    "context": "dom:embed",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Embed_HasNoEmbed.html",
+        "Potential_1": "WCAG20_Embed_HasNoEmbed.html",
+        "group": "WCAG20_Embed_HasNoEmbed.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify that the <embed> element is immediately followed by a non-embedded element",
+        "group": "<embed> elements should be immediately followed by a non-embedded element"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "4"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Fieldset_HasLegend",
+    "context": "dom:fieldset",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Fieldset_HasLegend.html",
+        "Fail_1": "WCAG20_Fieldset_HasLegend.html",
+        "Fail_2": "WCAG20_Fieldset_HasLegend.html",
+        "Fail_3": "WCAG20_Fieldset_HasLegend.html",
+        "group": "WCAG20_Fieldset_HasLegend.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "<fieldset> element does not have a <legend>",
+        "Fail_2": "<fieldset> element has more than one <legend>",
+        "Fail_3": "<fieldset> element <legend> is empty",
+        "group": " <fieldset> elements must have a single, non-empty <legend> as a label"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Form_HasSubmit",
+    "context": "dom:form",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Form_HasSubmit.html",
+        "Potential_1": "WCAG20_Form_HasSubmit.html",
+        "group": "WCAG20_Form_HasSubmit.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify the <form> element has a submit button or an image button",
+        "group": "A <form> element should have a submit button or an image button"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "3.2.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Form_TargetAndText",
+    "context": "dom:form[target]",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Form_TargetAndText.html",
+        "Potential_1": "WCAG20_Form_TargetAndText.html",
+        "group": "WCAG20_Form_TargetAndText.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify that interacting with content will not open pop-up windows or change the active window without informing the user",
+        "group": "User should be informed in advance when interacting with content causes a change of context"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "3.2.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Frame_HasTitle",
+    "context": "dom:frame, dom:iframe",
+    "help": {
+      "en-US": {
+        "group": "WCAG20_Frame_HasTitle.html",
+        "Pass_0": "WCAG20_Frame_HasTitle.html",
+        "Fail_1": "WCAG20_Frame_HasTitle.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "Inline frames must have a unique, non-empty 'title' attribute",
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Inline frame does not have a 'title' attribute"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": "cae760"
+  },
+  {
+    "id": "WCAG20_Html_HasLang",
+    "context": "dom:html",
+    "help": {
+      "en-US": {
+        "group": "WCAG20_Html_HasLang.html",
+        "Pass_0": "WCAG20_Html_HasLang.html",
+        "Fail_1": "WCAG20_Html_HasLang.html",
+        "Fail_2": "WCAG20_Html_HasLang.html",
+        "Fail_3": "WCAG20_Html_HasLang.html",
+        "Fail_4": "WCAG20_Html_HasLang.html",
+        "Fail_5": "WCAG20_Html_HasLang.html",
+        "Potential_5": "WCAG20_Html_HasLang.html",
+        "Potential_6": "WCAG20_Html_HasLang.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "Page must identify the default language of the document with a 'lang' attribute",
+        "Pass_0": "Page language detected as \"{0}\"",
+        "Fail_1": "Page detected as XHTML 1.0, but has neither 'lang' nor 'xml:lang' attributes",
+        "Fail_2": "Page detected as XHTML, but does not have an 'xml:lang' attribute",
+        "Fail_3": "Page detected as HTML, but does not have a 'lang' attribute",
+        "Fail_4": "Page detected with 'lang' and 'xml:lang' attributes and primary languages do not match: \"{0}\", \"{1}\"",
+        "Fail_5": "Page detected with 'lang' and 'xml:lang' attributes that do not match: \"{0}\", \"{1}\"",
+        "Potential_5": "Page detected as XHTML 1.0 with only a 'lang' attribute. Confirm that page is only delivered via text/html mime type",
+        "Potential_6": "Page detected as XHTML 1.0 with only an 'xml:lang' attribute. Confirm that page is only delivered via xml mime type"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_0",
+          "WCAG_2_1"
+        ],
+        "num": "3.1.1",
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": [
+      {
+        "b5c3f8": {
+          "Pass_0": "pass",
+          "Fail_1": "inapplicable",
+          "Fail_2": "inapplicable",
+          "Fail_3": "fail",
+          "Fail_4": "inapplicable",
+          "Fail_5": "inapplicable",
+          "Potential_5": "inapplicable",
+          "Potential_6": "inapplicable"
+        },
+        "5b7ae0": {
+          "Pass_0": "pass",
+          "Fail_1": "inapplicable",
+          "Fail_2": "inapplicable",
+          "Fail_3": "inapplicable",
+          "Fail_4": "fail",
+          "Fail_5": "pass",
+          "Potential_5": "inapplicable",
+          "Potential_6": "inapplicable"
+        }
+      }
+    ]
+  },
+  {
+    "id": "WCAG20_Img_HasAlt",
+    "context": "dom:img",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Img_HasAlt.html",
+        "Fail_1": "WCAG20_Img_HasAlt.html",
+        "Fail_2": "WCAG20_Img_HasAlt.html",
+        "Fail_3": "WCAG20_Img_HasAlt.html",
+        "group": "WCAG20_Img_HasAlt.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Image 'alt' attribute value consists only of whitespace",
+        "Fail_2": "Image does not have an 'alt' attribute short text alternative",
+        "Fail_3": "Image does not have an 'alt' attribute and 'title' attribute value consists only of whitespace",
+        "group": "Images must have an 'alt' attribute with a short text alternative if they convey meaning, or 'alt=\"\" if decorative"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": "23a2a8"
+  },
+  {
+    "id": "WCAG20_Img_LinkTextNotRedundant",
+    "context": "dom:img[alt]",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Img_LinkTextNotRedundant.html",
+        "Fail_1": "WCAG20_Img_LinkTextNotRedundant.html",
+        "Fail_2": "WCAG20_Img_LinkTextNotRedundant.html",
+        "Fail_3": "WCAG20_Img_LinkTextNotRedundant.html",
+        "group": "WCAG20_Img_LinkTextNotRedundant.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Link text is repeated in an image 'alt' value within the same link",
+        "Fail_2": "Link text of previous link is repeated in image 'alt' value of a link",
+        "Fail_3": "Image 'alt' value within a link is repeated in link text of the link after",
+        "group": "The text alternative for an image within a link should not repeat the link text or adjacent link text"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Img_PresentationImgHasNonNullAlt",
+    "context": "dom:img[alt]",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Img_PresentationImgHasNonNullAlt.html",
+        "Fail_1": "WCAG20_Img_PresentationImgHasNonNullAlt.html",
+        "group": "WCAG20_Img_PresentationImgHasNonNullAlt.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Image designated as decorative has non-null 'alt' attribute",
+        "group": "Image designated as decorative must have 'alt=\"\""
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Img_TitleEmptyWhenAltNull",
+    "context": "dom:img[alt]",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Img_TitleEmptyWhenAltNull.html",
+        "Fail_1": "WCAG20_Img_TitleEmptyWhenAltNull.html",
+        "group": "WCAG20_Img_TitleEmptyWhenAltNull.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The image 'alt' attribute is empty, but the 'title' attribute is not empty",
+        "group": "When the image 'alt' attribute is empty, the 'title' attribute must also be empty"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Input_ExplicitLabel",
+    "context": "aria:button,aria:checkbox,aria:combobox,aria:listbox,aria:menuitemcheckbox,aria:menuitemradio,aria:radio,aria:searchbox,aria:slider,aria:spinbutton,aria:switch,aria:textbox,aria:progressbar,dom:input[type=file],dom:output,dom:meter,dom:input[type=password]",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Input_ExplicitLabel.html",
+        "Fail_1": "WCAG20_Input_ExplicitLabel.html",
+        "Fail_2": "WCAG20_Input_ExplicitLabel.html",
+        "group": "WCAG20_Input_ExplicitLabel.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Form control element <{0}> has no associated label",
+        "Fail_2": "Form control with \"{0}\" role has no associated label",
+        "group": "Each form control must have an associated label"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "4.1.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": [
+      "97a4e1",
+      "e086e5"
+    ]
+  },
+  {
+    "id": "WCAG20_Input_ExplicitLabelImage",
+    "context": "dom:input",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Input_ExplicitLabelImage.html",
+        "Pass_1": "WCAG20_Input_ExplicitLabelImage.html",
+        "Pass_2": "WCAG20_Input_ExplicitLabelImage.html",
+        "Fail": "WCAG20_Input_ExplicitLabelImage.html",
+        "group": "WCAG20_Input_ExplicitLabelImage.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Image button provides alternative text using the 'alt' attribute",
+        "Pass_1": "Image button provides alternative text using a ARIA label",
+        "Pass_2": "Image button provides alternative text using the 'title' attribute",
+        "Fail": "The <input> element of type \"image\" has no text alternative",
+        "group": "The <input> element of type \"image\" should have a text alternative"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": "59796f"
+  },
+  {
+    "id": "WCAG20_Input_HasOnchange",
+    "context": "dom:input, dom:textarea, dom:select",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Input_HasOnchange.html",
+        "Potential_1": "WCAG20_Input_HasOnchange.html",
+        "group": "WCAG20_Input_HasOnchange.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify that any changes of context are explained in advance to the user",
+        "group": "Verify that any changes of context are explained in advance to the user"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "3.2.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Input_InFieldSet",
+    "context": "dom:input, dom:textarea, dom:select",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Input_InFieldSet.html",
+        "Potential_1": "WCAG20_Input_InFieldSet.html",
+        "group": "WCAG20_Input_InFieldSet.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Use the <fieldset> element to group logically related input elements",
+        "group": "Groups of logically related input elements should be contained within a <fieldset> element"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Input_LabelAfter",
+    "context": "dom:input",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Input_LabelAfter.html",
+        "Fail_1": "WCAG20_Input_LabelAfter.html",
+        "Fail_2": "WCAG20_Input_LabelAfter.html",
+        "group": "WCAG20_Input_LabelAfter.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Checkbox or radio button is nested in label, so label is not after the input control",
+        "Fail_2": "Label text is located before its associated checkbox or radio button element",
+        "group": "Checkboxes and radio buttons must have a label after the input control"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "3.3.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Input_LabelBefore",
+    "context": "dom:input, dom:textarea, dom:select",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Input_LabelBefore.html",
+        "Fail_1": "WCAG20_Input_LabelBefore.html",
+        "Fail_2": "WCAG20_Input_LabelBefore.html",
+        "group": "WCAG20_Input_LabelBefore.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Text input is nested in label such that input precedes the label text",
+        "Fail_2": "Label text is located after its associated text input or <select> element",
+        "group": "Text inputs and <select> elements must have a label before the input control"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "3.3.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Input_RadioChkInFieldSet",
+    "context": "dom:input",
+    "help": {
+      "en-US": {
+        "group": "WCAG20_Input_RadioChkInFieldSet.html",
+        "Pass_LoneNogroup": "WCAG20_Input_RadioChkInFieldSet.html",
+        "Pass_Grouped": "WCAG20_Input_RadioChkInFieldSet.html",
+        "Pass_RadioNoName": "WCAG20_Input_RadioChkInFieldSet.html",
+        "Fail_ControlNameMismatch": "WCAG20_Input_RadioChkInFieldSet.html",
+        "Fail_NotGroupedOtherGrouped": "WCAG20_Input_RadioChkInFieldSet.html",
+        "Fail_NotGroupedOtherNotGrouped": "WCAG20_Input_RadioChkInFieldSet.html",
+        "Fail_NotSameGroup": "WCAG20_Input_RadioChkInFieldSet.html",
+        "Potential_LoneCheckbox": "WCAG20_Input_RadioChkInFieldSet.html",
+        "Potential_UnnamedCheckbox": "WCAG20_Input_RadioChkInFieldSet.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "Related sets of radio buttons or checkboxes should be programmatically grouped",
+        "Pass_LoneNogroup": "{0} grouping not required for a control of this type",
+        "Pass_Grouped": "{0} input is grouped with other related controls with the same name",
+        "Pass_RadioNoName": "Radio input is not grouped, but passes because it has no name to group with other radio inputs",
+        "Fail_ControlNameMismatch": "{0} input found that has the same name, \"{2}\" as a {1} input",
+        "Fail_NotGroupedOtherGrouped": "{0} input is not in the group with another {0} with the name \"{1}\"",
+        "Fail_NotGroupedOtherNotGrouped": "{0} input and others with the name \"{1}\" are not grouped together",
+        "Fail_NotSameGroup": "{0} input is in a different group than another {0} with the name \"{1}\"",
+        "Potential_LoneCheckbox": "Verify that this ungrouped checkbox input is not related to other checkboxes",
+        "Potential_UnnamedCheckbox": "Verify that this un-named, ungrouped checkbox input is not related to other checkboxes"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Input_VisibleLabel",
+    "context": "aria:button,aria:checkbox,aria:combobox,aria:listbox,aria:menuitemcheckbox,aria:menuitemradio,aria:radio,aria:searchbox,aria:slider,aria:spinbutton,aria:switch,aria:textbox,aria:progressbar,dom:input[type=file],dom:output",
+    "dependencies": [
+      "WCAG20_Input_ExplicitLabel"
+    ],
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Input_VisibleLabel.html",
+        "Potential_1": "WCAG20_Input_VisibleLabel.html",
+        "group": "WCAG20_Input_VisibleLabel.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "The input element does not have an associated visible label",
+        "group": "An input element must have an associated visible label"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "3.3.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Label_RefValid",
+    "context": "dom:label[for]",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Label_RefValid.html",
+        "Fail_1": "WCAG20_Label_RefValid.html",
+        "group": "WCAG20_Label_RefValid.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The value \"{0}\" of the 'for' attribute is not the 'id' of a valid <input> element",
+        "group": "The 'for' attribute must reference a non-empty, unique 'id' attribute of an <input> element"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Meta_RedirectZero",
+    "context": "dom:meta[http-equiv][content]",
+    "help": {
+      "en-US": {
+        "group": "WCAG20_Meta_RedirectZero.html",
+        "pass": "WCAG20_Meta_RedirectZero.html",
+        "fail": "WCAG20_Meta_RedirectZero.html",
+        "fail_longrefresh": "WCAG20_Meta_RedirectZero.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "Page should not automatically refresh without warning or option to turn it off or adjust the time limit",
+        "pass": "Rule Passed",
+        "fail": "Check page does not automatically refresh without warning or options",
+        "fail_longrefresh": "Check page does not automatically refresh without warning or options"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.2.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": [
+      "bisz58",
+      {
+        "bc659a": {
+          "pass": "pass",
+          "fail": "fail",
+          "fail_longrefresh": "pass"
+        }
+      }
+    ]
+  },
+  {
+    "id": "WCAG20_Object_HasText",
+    "context": "dom:object",
+    "help": {
+      "en-US": {
+        "group": "WCAG20_Object_HasText.html",
+        "Pass_0": "WCAG20_Object_HasText.html",
+        "Fail_1": "WCAG20_Object_HasText.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "<object> elements must have a text alternative for the content rendered by the object",
+        "Pass_0": "Rule Passed",
+        "Fail_1": "An <object> element does not have a text alternative"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": "8fc3b6"
+  },
+  {
+    "id": "WCAG20_Script_FocusBlurs",
+    "context": "dom:*[onfocus]",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Script_FocusBlurs.html",
+        "Potential_1": "WCAG20_Script_FocusBlurs.html",
+        "group": "WCAG20_Script_FocusBlurs.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify script does not remove focus from content that normally receives focus",
+        "group": "Scripting must not remove focus from content that normally receives focus"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "2.4.7",
+          "3.2.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "1"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Select_HasOptGroup",
+    "context": "dom:select",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Select_HasOptGroup.html",
+        "Potential_1": "WCAG20_Select_HasOptGroup.html",
+        "group": "WCAG20_Select_HasOptGroup.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Group of related options may need <optgroup>",
+        "group": "Groups of related options within a selection list should be grouped with <optgroup>"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "RECOMMENDATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Select_NoChangeAction",
+    "context": "dom:select",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Select_NoChangeAction.html",
+        "Potential_1": "WCAG20_Select_NoChangeAction.html",
+        "group": "WCAG20_Select_NoChangeAction.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify that no change of context or action occurs when selection options in this component receive focus",
+        "group": "No changes of context should occur when a selection value receives focus"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "3.2.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Style_BeforeAfter",
+    "context": "dom:style, dom:link",
+    "help": {
+      "en-US": {
+        "group": "WCAG20_Style_BeforeAfter.html",
+        "Pass_0": "WCAG20_Style_BeforeAfter.html",
+        "Potential_1": "WCAG20_Style_BeforeAfter.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "Do not use CSS '::before' and '::after' pseudo-elements to insert non-decorative content",
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify the '::before' and '::after' pseudo-elements do not insert non-decorative content"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_0",
+          "WCAG_2_1"
+        ],
+        "num": "1.3.1",
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Table_CapSummRedundant",
+    "context": "dom:table",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Table_CapSummRedundant.html",
+        "Fail_1": "WCAG20_Table_CapSummRedundant.html",
+        "group": "WCAG20_Table_CapSummRedundant.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The table summary duplicates the caption",
+        "group": "The table summary must not duplicate the caption"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Table_Scope_Valid",
+    "context": "dom:td[scope], dom:th[scope]",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Table_Scope_Valid.html",
+        "Fail_1": "WCAG20_Table_Scope_Valid.html",
+        "Fail_2": "WCAG20_Table_Scope_Valid.html",
+        "group": "WCAG20_Table_Scope_Valid.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Value provided is invalid for the 'scope' attribute",
+        "Fail_2": "The 'scope' attribute should only be used on a <th> element",
+        "group": "Value for 'scope' attribute must be \"row\", \"col\", \"rowgroup\", or \"colgroup\""
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Table_Structure",
+    "context": "dom:table",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Table_Structure.html",
+        "Fail_1": "WCAG20_Table_Structure.html",
+        "group": "WCAG20_Table_Structure.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The <{0}> element with \"presentation\" role or \"none\" role has structural element(s) and/or attribute(s) '{1}'",
+        "group": "Table elements with 'role=\"presentation\" or 'role=\"none\" should not have structural elements or attributes"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Text_Emoticons",
+    "context": "dom:*",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Text_Emoticons.html",
+        "Potential_1": "WCAG20_Text_Emoticons.html",
+        "group": "WCAG20_Text_Emoticons.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify that emoticons have a text alternative",
+        "group": "Emoticons must have a short text alternative that describes their purpose"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.1.1"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG20_Text_LetterSpacing",
+    "context": "dom:*",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG20_Text_LetterSpacing.html",
+        "Potential_1": "WCAG20_Text_LetterSpacing.html",
+        "group": "WCAG20_Text_LetterSpacing.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify space characters are not being used to create space between the letters of a word",
+        "group": "Use CSS 'letter-spacing' to control spacing within a word"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.2"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  },
+  {
+    "id": "WCAG21_Input_Autocomplete",
+    "context": "dom:input[autocomplete], dom:textarea[autocomplete], dom:select[autocomplete]",
+    "help": {
+      "en-US": {
+        "group": "WCAG21_Input_Autocomplete.html",
+        "Pass_0": "WCAG21_Input_Autocomplete.html",
+        "Fail_1": "WCAG21_Input_Autocomplete.html",
+        "Fail_attribute_incorrect": "WCAG21_Input_Autocomplete.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "The 'autocomplete' attribute's token(s) must be appropriate for the input form field",
+        "Pass_0": "Rule Passed",
+        "Fail_1": "The 'autocomplete' attribute's token(s) are not appropriate for the input form field",
+        "Fail_attribute_incorrect": "The 'autocomplete' attribute has an incorrect value"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1",
+          "WCAG_2_0"
+        ],
+        "num": [
+          "1.3.5"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": "73f2c2"
+  },
+  {
+    "id": "WCAG21_Label_Accessible",
+    "context": "aria:button,aria:checkbox,aria:gridcell,aria:link,aria:menuitem,aria:menuitemcheckbox,aria:menuitemradio,aria:option,aria:radio,aria:switch,aria:tab,aria:treeitem,dom:input,dom:textarea,dom:select,dom:output,dom:meter",
+    "help": {
+      "en-US": {
+        "Pass_0": "WCAG21_Label_Accessible.html",
+        "Fail_1": "WCAG21_Label_Accessible.html",
+        "group": "WCAG21_Label_Accessible.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "Pass_0": "Rule Passed",
+        "Fail_1": "Accessible name does not match or contain the visible label text",
+        "group": "Accessible name must match or contain the visible label text"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_1"
+        ],
+        "num": [
+          "2.5.3"
+        ],
+        "level": "VIOLATION",
+        "toolkitLevel": "2"
+      }
+    ],
+    "act": "2ee8b8"
+  },
+  {
+    "id": "WCAG21_Style_Viewport",
+    "context": "dom:link, dom:style, dom:*[style]",
+    "help": {
+      "en-US": {
+        "group": "WCAG21_Style_Viewport.html",
+        "Pass_0": "WCAG21_Style_Viewport.html",
+        "Potential_1": "WCAG21_Style_Viewport.html"
+      }
+    },
+    "messages": {
+      "en-US": {
+        "group": "Text must scale up to 200% without loss of content or functionality",
+        "Pass_0": "Rule Passed",
+        "Potential_1": "Verify that text sized using viewport units can be resized up to 200%"
+      }
+    },
+    "rulesets": [
+      {
+        "id": [
+          "IBM_Accessibility",
+          "WCAG_2_0",
+          "WCAG_2_1"
+        ],
+        "num": "1.4.4",
+        "level": "VIOLATION",
+        "toolkitLevel": "3"
+      }
+    ],
+    "act": []
+  }
+]

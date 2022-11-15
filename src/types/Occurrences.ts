@@ -1,0 +1,1 @@
+export type Occurrences = { websites: Array<string>, occurrences: number };

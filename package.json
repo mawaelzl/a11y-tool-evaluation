@@ -1,0 +1,35 @@
+{
+  "name": "tool-eval",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node ./src/evaluate.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@qualweb/types": "0.7.19",
+    "@types/jsdom": "^20.0.1",
+    "@types/node": "^18.11.9",
+    "grunt": "^1.5.3",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  },
+  "description": "",
+  "dependencies": {
+    "@continuum/continuum-javascript-community": "file:./src/tool_configs/laContinuum/continuum-continuum-javascript-community-5.0.0.tgz",
+    "@qualweb/core": "^0.7.28",
+    "@siteimprove/alfa-act": "^0.51.0",
+    "@siteimprove/alfa-puppeteer": "^0.51.0",
+    "@siteimprove/alfa-rules": "^0.51.0",
+    "@siteimprove/alfa-web": "^0.51.0",
+    "@types/html_codesniffer": "^2.5.1",
+    "accessibility-checker": "^3.1.40",
+    "axe-core": "^4.5.0",
+    "jsdom": "^20.0.2",
+    "puppeteer": "^19.2.2"
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "errors": [],
+  "result": {
+    "1.1.1": {
+      "websites": [
+        "https://www.gov.am/am/",
+        "https://bangladesh.gov.bd/index.php",
+        "https://www.presidence.gov.bi/",
+        "https://www.opmcm.gov.np/",
+        "https://www.gov.cn/",
+        "https://www.bundesregierung.de/breg-de",
+        "https://www.indonesia.go.id/",
+        "https://www.gov.il",
+        "https://www.governo.it/en",
+        "https://www.gov.kz/",
+        "http://www.laogov.gov.la/Pages/home.aspx",
+        "https://www.gov.ro/",
+        "https://www.president.go.kr",
+        "https://administracion.gob.es/",
+        "https://turkiye.gov.tr/",
+        "https://www.gov.uz/uz",
+        "https://pmo.gov.et"
+      ],
+      "occurrences": 236
+    },
+    "1.3.1": {
+      "websites": [
+        "https://mfa.gov.af/en/home-2/",
+        "https://www.gov.cn/",
+        "https://www.india.gov.in/",
+        "https://www.indonesia.go.id/",
+        "https://www.gov.ie/ga/",
+        "https://www.gov.il",
+        "https://www.e-gov.go.jp/",
+        "http://www.laogov.gov.la/Pages/home.aspx",
+        "https://www.malaysia.gov.my/portal/index",
+        "https://www.gov.ro/",
+        "http://government.ru/en/",
+        "https://www.tanzania.go.tz/",
+        "https://turkiye.gov.tr/"
+      ],
+      "occurrences": 41
+    },
+    "1.4.1": {
+      "websites": [
+        "https://www.stm.dk/",
+        "https://www.india.gov.in/",
+        "https://www.indonesia.go.id/",
+        "https://www.gov.ie/ga/",
+        "http://www.laogov.gov.la/Pages/home.aspx"
+      ],
+      "occurrences": 34
+    },
+    "1.4.3": {
+      "websites": [
+        "https://mfa.gov.af/en/home-2/",
+        "https://bangladesh.gov.bd/index.php",
+        "https://www.presidence.gov.bi/",
+        "https://www.opmcm.gov.np/",
+        "https://www.india.gov.in/",
+        "https://www.indonesia.go.id/",
+        "https://www.gov.il",
+        "http://www.laogov.gov.la/Pages/home.aspx",
+        "https://www.malaysia.gov.my/portal/index",
+        "https://gov.md",
+        "http://government.ru/en/",
+        "https://www.mofa.gov.sa/ar/Pages/default.aspx",
+        "https://www.president.go.kr",
+        "https://www.tanzania.go.tz/",
+        "https://www.gov.uz/uz"
+      ],
+      "occurrences": 192
+    },
+    "1.4.4": {
+      "websites": [
+        "https://mfa.gov.af/en/home-2/",
+        "https://www.presidence.gov.bi/",
+        "https://www.opmcm.gov.np/",
+        "https://www.gov.cn/",
+        "https://www.gouvernement.fr",
+        "https://www.bundesregierung.de/breg-de",
+        "https://www.india.gov.in/",
+        "https://www.indonesia.go.id/",
+        "https://www.gov.il",
+        "http://www.laogov.gov.la/Pages/home.aspx",
+        "https://www.malaysia.gov.my/portal/index",
+        "https://gov.md",
+        "https://www.portugal.gov.pt/pt/gc23",
+        "https://www.gov.ro/",
+        "http://government.ru/en/",
+        "https://www.president.go.kr",
+        "http://timor-leste.gov.tl/",
+        "https://turkmenistan.gov.tm/tk",
+        "https://www.gov.uz/uz",
+        "https://pmo.gov.et"
+      ],
+      "occurrences": 322
+    },
+    "1.4.6": {
+      "websites": [
+        "https://mfa.gov.af/en/home-2/",
+        "https://bangladesh.gov.bd/index.php",
+        "https://www.presidence.gov.bi/",
+        "https://www.opmcm.gov.np/",
+        "https://www.gouvernement.fr",
+        "https://www.bundesregierung.de/breg-de",
+        "https://www.india.gov.in/",
+        "https://www.indonesia.go.id/",
+        "https://www.gov.ie/ga/",
+        "https://www.gov.il",
+        "https://www.governo.it/en",
+        "https://www.gov.kg/ky",
+        "http://www.laogov.gov.la/Pages/home.aspx",
+        "https://www.malaysia.gov.my/portal/index",
+        "https://gov.md",
+        "https://www.rijksoverheid.nl/",
+        "https://www.regjeringen.no/no/id4/",
+        "https://www.portugal.gov.pt/pt/gc23",
+        "http://government.ru/en/",
+        "https://www.mofa.gov.sa/ar/Pages/default.aspx",
+        "https://www.president.go.kr",
+        "https://administracion.gob.es/",
+        "https://www.tanzania.go.tz/",
+        "https://turkiye.gov.tr/",
+        "https://www.gov.uz/uz",
+        "https://pmo.gov.et"
+      ],
+      "occurrences": 473
+    },
+    "1.4.8": {
+      "websites": [
+        "https://mfa.gov.af/en/home-2/",
+        "https://www.gov.am/am/",
+        "https://www.gov.az",
+        "https://www.gov.cn/",
+        "https://www.bundesregierung.de/breg-de",
+        "https://www.india.gov.in/",
+        "https://www.indonesia.go.id/",
+        "https://www.gov.ie/ga/",
+        "https://www.gov.il",
+        "https://www.governo.it/en",
+        "https://www.e-gov.go.jp/",
+        "https://www.gov.kz/",
+        "https://www.gov.kg/ky",
+        "http://www.laogov.gov.la/Pages/home.aspx",
+        "https://www.malaysia.gov.my/portal/index",
+        "https://gov.md",
+        "https://www.rijksoverheid.nl/",
+        "https://www.regjeringen.no/no/id4/",
+        "https://pakistan.gov.pk/",
+        "https://www.portugal.gov.pt/pt/gc23",
+        "https://www.gov.ro/",
+        "https://www.president.go.kr",
+        "https://administracion.gob.es/",
+        "https://www.tanzania.go.tz/",
+        "https://thaigov.go.th/",
+        "https://turkiye.gov.tr/",
+        "https://www.gov.uk/",
+        "https://www.gov.uz/uz",
+        "https://primeminister.chinhphu.vn/",
+        "https://pmo.gov.et"
+      ],
+      "occurrences": 728
+    },
+    "1.4.10": {
+      "websites": [
+        "https://mfa.gov.af/en/home-2/",
+        "https://www.presidence.gov.bi/",
+        "https://www.gov.il",
+        "https://www.malaysia.gov.my/portal/index",
+        "https://gov.md",
+        "https://www.portugal.gov.pt/pt/gc23",
+        "https://www.gov.ro/"
+      ],
+      "occurrences": 7
+    },
+    "2.1.1": {
+      "websites": [
+        "https://www.governo.it/en"
+      ],
+      "occurrences": 1
+    },
+    "2.1.3": {
+      "websites": [
+        "https://www.governo.it/en"
+      ],
+      "occurrences": 1
+    },
+    "2.4.2": {
+      "websites": [
+        "https://www.presidence.gov.bi/",
+        "https://www.gov.ge/home"
+      ],
+      "occurrences": 2
+    },
+    "2.4.4": {
+      "websites": [
+        "https://mfa.gov.af/en/home-2/",
+        "https://www.gov.am/am/",
+        "https://www.gov.az",
+        "https://bangladesh.gov.bd/index.php",
+        "https://www.presidence.gov.bi/",
+        "https://www.opmcm.gov.np/",
+        "https://www.gov.cn/",
+        "https://www.gouvernement.fr",
+        "https://www.india.gov.in/",
+        "https://www.indonesia.go.id/",
+        "https://www.gov.il",
+        "https://www.governo.it/en",
+        "https://www.e-gov.go.jp/",
+        "https://www.gov.kg/ky",
+        "http://www.laogov.gov.la/Pages/home.aspx",
+        "https://www.malaysia.gov.my/portal/index",
+        "https://gov.md",
+        "https://www.gov.ro/",
+        "https://www.mofa.gov.sa/ar/Pages/default.aspx",
+        "https://www.president.go.kr",
+        "https://turkiye.gov.tr/",
+        "https://www.gov.uz/uz",
+        "https://primeminister.chinhphu.vn/"
+      ],
+      "occurrences": 207
+    },
+    "2.4.6": {
+      "websites": [
+        "https://www.gov.cn/",
+        "https://www.gov.il",
+        "https://www.malaysia.gov.my/portal/index",
+        "https://www.gov.ro/",
+        "https://www.tanzania.go.tz/"
+      ],
+      "occurrences": 15
+    },
+    "2.4.9": {
+      "websites": [
+        "https://mfa.gov.af/en/home-2/",
+        "https://www.gov.am/am/",
+        "https://www.gov.az",
+        "https://bangladesh.gov.bd/index.php",
+        "https://www.presidence.gov.bi/",
+        "https://www.opmcm.gov.np/",
+        "https://www.gov.cn/",
+        "https://www.gouvernement.fr",
+        "https://www.india.gov.in/",
+        "https://www.indonesia.go.id/",
+        "https://www.gov.il",
+        "https://www.governo.it/en",
+        "https://www.e-gov.go.jp/",
+        "https://www.gov.kg/ky",
+        "http://www.laogov.gov.la/Pages/home.aspx",
+        "https://www.malaysia.gov.my/portal/index",
+        "https://gov.md",
+        "https://www.gov.ro/",
+        "https://www.mofa.gov.sa/ar/Pages/default.aspx",
+        "https://www.president.go.kr",
+        "https://turkiye.gov.tr/",
+        "https://www.gov.uz/uz",
+        "https://primeminister.chinhphu.vn/"
+      ],
+      "occurrences": 207
+    },
+    "2.5.3": {
+      "websites": [
+        "https://bangladesh.gov.bd/index.php",
+        "https://www.bundesregierung.de/breg-de",
+        "https://www.portugal.gov.pt/pt/gc23",
+        "https://pmo.gov.et"
+      ],
+      "occurrences": 8
+    },
+    "3.1.1": {
+      "websites": [
+        "https://www.gov.cn/",
+        "https://www.gov.kz/",
+        "https://pakistan.gov.pk/",
+        "https://www.gov.ro/",
+        "https://pmo.gov.et"
+      ],
+      "occurrences": 5
+    },
+    "4.1.1": {
+      "websites": [
+        "https://www.presidence.gov.bi/",
+        "https://www.opmcm.gov.np/",
+        "https://www.gov.cn/",
+        "https://www.stm.dk/",
+        "https://www.bundesregierung.de/breg-de",
+        "https://www.gov.il",
+        "https://www.malaysia.gov.my/portal/index",
+        "https://gov.md",
+        "https://www.portugal.gov.pt/pt/gc23",
+        "https://www.mofa.gov.sa/ar/Pages/default.aspx",
+        "https://www.tanzania.go.tz/",
+        "http://timor-leste.gov.tl/",
+        "https://www.gov.uz/uz",
+        "https://pmo.gov.et"
+      ],
+      "occurrences": 137
+    },
+    "4.1.2": {
+      "websites": [
+        "https://mfa.gov.af/en/home-2/",
+        "https://www.gov.am/am/",
+        "https://www.gov.az",
+        "https://bangladesh.gov.bd/index.php",
+        "https://www.presidence.gov.bi/",
+        "https://www.opmcm.gov.np/",
+        "https://www.gov.cn/",
+        "https://www.stm.dk/",
+        "https://www.gouvernement.fr",
+        "https://www.bundesregierung.de/breg-de",
+        "https://www.india.gov.in/",
+        "https://www.indonesia.go.id/",
+        "https://www.gov.il",
+        "https://www.governo.it/en",
+        "https://www.e-gov.go.jp/",
+        "https://www.gov.kg/ky",
+        "http://www.laogov.gov.la/Pages/home.aspx",
+        "https://www.malaysia.gov.my/portal/index",
+        "https://gov.md",
+        "https://www.portugal.gov.pt/pt/gc23",
+        "https://www.gov.ro/",
+        "http://government.ru/en/",
+        "https://www.mofa.gov.sa/ar/Pages/default.aspx",
+        "https://www.president.go.kr",
+        "https://administracion.gob.es/",
+        "https://www.tanzania.go.tz/",
+        "https://thaigov.go.th/",
+        "http://timor-leste.gov.tl/",
+        "https://turkiye.gov.tr/",
+        "https://www.gov.uz/uz",
+        "https://primeminister.chinhphu.vn/",
+        "https://pmo.gov.et"
+      ],
+      "occurrences": 277
+    }
+  }
+}
