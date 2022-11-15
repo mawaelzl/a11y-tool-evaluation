@@ -8,11 +8,11 @@ import { continuumConfig } from "./continuum/continuum";
 import { waveConfig } from "./wave/wave";
 
 export const toolConfigs: ToolConfig<any>[] = [
-    // aCheckerConfig,
-    // alfaConfig,
+    aCheckerConfig,
+    alfaConfig,
     axeConfig,
-    // continuumConfig,
-    // htmlcsConfig,
-    // qualwebConfig,
-    // waveConfig,
+    continuumConfig,
+    htmlcsConfig,
+    qualwebConfig,
+    waveConfig,
 ];

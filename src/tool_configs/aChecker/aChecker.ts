@@ -3,23 +3,6 @@ import { ToolConfig } from "../../types/ToolConfig";
 import { ICheckerError, ICheckerResult, ReportResult } from "accessibility-checker/lib/api/IChecker";
 import * as aChecker from "accessibility-checker";
 
-// aChecker.getRules()
-//     .then((rules: any) => {
-//         writeFile(`./src/tool_configs/aChecker/rules.json`, JSON.stringify(rules));
-//     });
-
-// aChecker.getRules()
-//     .then((rules: any) => {
-//         let rulesResult = rules.reduce((acc: Map<string, Array<string>>, curr: any) => {
-//
-//             acc.set(curr.id, curr.rulesets.flatMap((set: any) => set.num));
-//
-//             return acc;
-//         }, new Map<string, Array<string>>());
-//
-//         console.log(rulesResult);
-//     });
-
 let ruleMap: Map<string, string[]>;
 
 export const aCheckerConfig: ToolConfig<ICheckerResult> = {

@@ -5,3 +5,5 @@ node_modules
 .idea
 
 src/tool_configs/nuValidator
+
+src/@types/vnu-jar
